@@ -11,10 +11,18 @@ class UsersController < ApplicationController
     if @user.save
       session[:user_id] = @user.id
       flash[:success] = "Welcome #{@user.username}"
-      redirect_to posts_path
+      redirect_to testpost_path
     else
       render 'new'
     end
+  end
+
+  def destroy
+    @user = User.find(params[:id])
+    @user.destroy
+    session[:user_id] = 0
+    flash[:success] = 'You have been destroyed!'
+    redirect_to login_path
   end
 
   private
