@@ -1,11 +1,11 @@
 <h1>Create a new post<h1>
 
 
-  <%= form_with scope: :post, local: true do |form| %>
+  <%= form_for(@post) do |form| %>
 
     <p>
-      <%= form.label :type %><br>
-      <%= form.text_area :type %><br>
+      <%= form.label :choice %><br>
+      <%= form.text_area :choice %><br>
       <%= form.label :post %><br>
       <%= form.text_area :body %><br>
       <%= form.label :address %><br>
@@ -13,6 +13,6 @@
     </p>
 
     <p>
-      <%= form.submit %>
+      <%= form.submit "Create"%>
     </p>
   <% end %>
