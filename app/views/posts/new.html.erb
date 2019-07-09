@@ -1,1 +1,14 @@
-<h1>hi<h1>
+<h1>Create a new post<h1>
+
+
+  <%= form_with scope: :post, local: true do |form| %>
+
+    <p>
+      <%= form.label :post %><br>
+      <%= form.text_area :text %>
+    </p>
+
+    <p>
+      <%= form.submit %>
+    </p>
+  <% end %>
