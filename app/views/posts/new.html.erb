@@ -4,8 +4,12 @@
   <%= form_with scope: :post, local: true do |form| %>
 
     <p>
+      <%= form.label :type %><br>
+      <%= form.text_area :type %><br>
       <%= form.label :post %><br>
-      <%= form.text_area :text %>
+      <%= form.text_area :body %><br>
+      <%= form.label :address %><br>
+      <%= form.text_area :address %>
     </p>
 
     <p>
