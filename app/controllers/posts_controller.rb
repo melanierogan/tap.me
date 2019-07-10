@@ -4,9 +4,8 @@ class PostsController < ApplicationController
     @posts = []
     @all_posts = Post.all
     @all_posts.each do |p|
-    @posts << p if (Time.new - p.created_at) < 10
+    @posts << p if (Time.new - p.created_at) < 86400
     end
-
   end
 
 
