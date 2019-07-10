@@ -1,11 +1,14 @@
 class PostsController < ApplicationController
   helper_method :time_calculation
   def index
-    @posts = Post.all
+    @posts = []
+    @all_posts = Post.all
+    @all_posts.each do |p|
+    @posts << p if (Time.new - p.created_at) < 10
+    end
+
   end
-  def show
-    @post = Post.find(params[:id])
-  end
+
 
   def new
     @post = Post.new
