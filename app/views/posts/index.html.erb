@@ -5,10 +5,10 @@
   <%= p.choice %><br>
   <%= simple_format(p.body) %><br>
   <%= p.address %><br>
-  <%= p.created_at %><br>
-  <%= User.find(p.user_id).username %>
+  <%= User.find(p.user_id).username %><br>
+  <%= time_calculation(p.created_at) %>
   <div>
- <%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{p.latitude},#{p.longitude}&markers=#{p.latitude},#{p.longitude}&zoom=17&size=640x400&key=#{ENV['GOOGLE_API_KEY']}",
+ <%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{p.latitude},#{p.longitude}&markers=#{p.latitude},#{p.longitude}&zoom=17&size=320x200&key=#{ENV['GOOGLE_API_KEY']}",
    class: 'img-fluid img-rounded', alt: '#{p.address} on the map'%>
    </div>
   <% end %>
