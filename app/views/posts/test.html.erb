@@ -1,0 +1,6 @@
+<p> hope this prints the variable here: <%= ENV['GOOGLE_API'] %></p>
+  <img src="<%= ENV['GOOGLE_API'] %>">
+  <p> hope this shows the variable in the url:</p>
+  <img src="https://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,New+York,NY&zoom=13&size=600x300&maptype=roadmap&markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318&markers=color:red%7Clabel:C%7C40.718217,-73.998284&key=<%= ENV['GOOGLE_API'] %>">
+  <p> hope this shows the key variable in the url:</p>
+  <img src="https://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,New+York,NY&zoom=13&size=600x300&maptype=roadmap&markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318&markers=color:red%7Clabel:C%7C40.718217,-73.998284&key=<%= ENV['GOOGLE_API_KEY'] %>">

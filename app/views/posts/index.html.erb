@@ -8,8 +8,8 @@
   <%= p.created_at %><br>
   <%= User.find(p.user_id).username %>
   <div>
-  <%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{p.latitude},#{p.longitude}&markers=#{p.latitude},#{p.longitude}&zoom=17&size=640x400&key=#",
-    class: 'img-fluid img-rounded', alt: "#{p.address} on the map"%>
-    </div>
+ <%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{p.latitude},#{p.longitude}&markers=#{p.latitude},#{p.longitude}&zoom=17&size=640x400&key=#{ENV['GOOGLE_API_KEY']}",
+   class: 'img-fluid img-rounded', alt: '#{p.address} on the map'%>
+   </div>
   <% end %>
 </div>
