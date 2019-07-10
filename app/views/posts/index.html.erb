@@ -1,12 +1,37 @@
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+    <script type="text/javascript"> 
+
+  // $(document).ready(function() { 
+  //         function toggleshit(bum, bum_toggle) {
+  //         var $input = $(bum_toggle);
+  //         if ($input.prop('checked')) $(bum).show();
+  //         else $(bum).hide()
+  //       }
+  //       }); 
+        $(document).ready(function() { 
+          $('#bum_toggle').change(function (){
+            if(this.checked)
+              $('#bum').hide();
+            else
+              $('#bum').show();
+          })
+        });
+        
+
+    </script> 
 <p>posts is saved</p>
+      <div class="container fluid" align="center">
+        <input class="toggle" id="bum_toggle" type="checkbox" />
+      </div>
+
 
 <div class="card fluid p-4">
 <% @posts.each do |p| %>
-  <%= p.choice %><br>
-  <%= simple_format(p.body) %><br>
-  <%= p.address %><br>
-  <%= p.created_at %><br>
-  <%= User.find(p.user_id).username %>
+  <p id="bum"><%= p.choice %></p>
+  <p><%= simple_format(p.body) %></p>
+  <p><%= p.address %></p>
+  <p><%= p.created_at %></p>
+  <p><%= User.find(p.user_id).username %></p>
   <div>
  <%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{p.latitude},#{p.longitude}&markers=#{p.latitude},#{p.longitude}&zoom=17&size=640x400&key=#{ENV['GOOGLE_API_KEY']}",
    class: 'img-fluid img-rounded', alt: '#{p.address} on the map'%>

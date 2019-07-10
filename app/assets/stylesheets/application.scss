@@ -20,3 +20,51 @@
 body {
   background-color: #f56d74;
 }
+
+.toggle {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 90px;
+  height: 46px;
+  display: inline-block;
+  position: relative;
+  border-radius: 50px;
+  overflow: hidden;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: #707070;
+  transition: background-color ease 0.3s;
+}
+
+.toggle:before {
+  content: "🏃  🎭";
+  display: block;
+  position: absolute;
+  z-index: 2;
+  width: 38px;
+  height: 38px;
+  background: #fff;
+  left: 4px;
+  top: 4px;
+  border-radius: 50%;
+  font: 30px/38px Helvetica;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-indent: -32px;
+  word-spacing: 37px;
+  color: #fff;
+  text-shadow: -1px -1px rgba(0,0,0,0.15);
+  white-space: nowrap;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  transition: all cubic-bezier(0.3, 1.5, 0.7, 1) 0.3s;
+}
+
+.toggle:checked {
+  background-color: #4CD964;
+}
+
+.toggle:checked:before {
+  left: 46px;
+}
