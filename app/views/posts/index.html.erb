@@ -11,5 +11,8 @@
  <%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{p.latitude},#{p.longitude}&markers=#{p.latitude},#{p.longitude}&zoom=17&size=320x200&key=#{ENV['GOOGLE_API_KEY']}",
    class: 'img-fluid img-rounded', alt: '#{p.address} on the map'%>
    </div>
+   <div class="col-sm" align="center">
+      <%= link_to 'Update', edit_post_path(p), :class => "btn btn-outline-light" %>
+      </div>
   <% end %>
 </div>

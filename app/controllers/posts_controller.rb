@@ -8,18 +8,32 @@ class PostsController < ApplicationController
     end
   end
 
-
   def new
     @post = Post.new
+  end
+
+  def edit
+    @post = Post.find(params[:id])
   end
 
   def create
     @post = Post.new(post_params)
     @post.user_id = current_user.id
     if @post.save
+      flash[:success] = "Your post has been added"
       redirect_to posts_path
     else
       render 'new'
+    end
+  end
+
+  def update
+    @post = Post.find(params[:id])
+    if @post.update(post_params)
+      flash[:success] = "Your posts has been updated"
+      redirect_to posts_path
+    else
+      render 'edit'
     end
   end
 
