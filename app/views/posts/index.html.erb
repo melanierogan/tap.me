@@ -1,5 +1,6 @@
 <p>posts is saved</p>
 
+<div class="card fluid p-4">
 <% @posts.each do |p| %>
   <%= p.choice %><br>
   <%= simple_format(p.body) %><br>
@@ -11,4 +12,4 @@
     class: 'img-fluid img-rounded', alt: "#{p.address} on the map"%>
     </div>
   <% end %>
-  
+</div>
