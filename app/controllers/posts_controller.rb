@@ -37,6 +37,13 @@ class PostsController < ApplicationController
     end
   end
 
+  def destroy
+    @post = Post.find(params[:id])
+    @post.destroy
+    flash[:success] = 'Your post has been deleted'
+    redirect_to posts_path
+  end
+
   def time_calculation(created_at_time, time_now = Time.new)
   time_difference_in_sec = time_now - created_at_time
   if time_difference_in_sec < 60

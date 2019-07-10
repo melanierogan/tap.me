@@ -13,6 +13,11 @@
    </div>
    <div class="col-sm" align="center">
       <%= link_to 'Update', edit_post_path(p), :class => "btn btn-outline-light" %>
-      </div>
+    </div>
+    <div class="col-sm" align="right">
+      <%= link_to 'Delete', post_path(p), :class => "btn btn-outline-secondary",
+      method: :delete,
+      data: { confirm: 'Are you sure?' } %>
+    </div>
   <% end %>
 </div>
