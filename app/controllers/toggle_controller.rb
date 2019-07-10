@@ -1,5 +1,5 @@
 class ToggleController < ApplicationController
   def show
-    render 'layouts/toggle'
+    render 'toggle/toggle'
   end
 end

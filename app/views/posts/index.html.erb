@@ -1,24 +1,16 @@
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
-    <script type="text/javascript"> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
 
-  // $(document).ready(function() { 
-  //         function toggleshit(bum, bum_toggle) {
-  //         var $input = $(bum_toggle);
-  //         if ($input.prop('checked')) $(bum).show();
-  //         else $(bum).hide()
-  //       }
-  //       }); 
-        $(document).ready(function() { 
-          $('#bum_toggle').change(function (){
-            if(this.checked)
-              $('#bum').hide();
-            else
-              $('#bum').show();
-          })
-        });
-        
+    $(document).ready(function() {
+      $('#bum_toggle').change(function (){
+        if(this.checked)
+          $('#bum').hide();
+        else
+          $('#bum').show();
+      })
+    });
 
-    </script> 
+    </script>
 <p>posts is saved</p>
       <div class="container fluid" align="center">
         <input class="toggle" id="bum_toggle" type="checkbox" />

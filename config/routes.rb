@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   get 'sessions/new'
-  root 'toggle#show'
+  root 'posts#index'
 
 
   resources :posts
