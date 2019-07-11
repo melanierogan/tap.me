@@ -16,14 +16,28 @@
 
  @import "bootstrap";
 
+ @media all and (max-width: 100em) {
+     body {
+         font-size: 2.5em; /* 1.5x default size */
+     }
+     .login-form {
+      width: 15vw;
+      margin: 0 auto;
+      // padding: 0 4vmax;
+      }
+    .login-form .btn {
+      font-size: 1.5vmin;
+    }
+ }
+
  @media all and (max-width: 75em) { /* screen size until 1200px */
      body {
          font-size: 2.5em; /* 1.5x default size */
      }
      .login-form {
-      width: 35vw;
+      width: 25vw;
       margin: 0 auto;
-      padding: 0 2vmax;
+      // padding: 0 4vmax;
       }
     .login-form .btn {
       font-size: 1.5vmin;
@@ -34,28 +48,28 @@
          font-size: 2.2em; /* 1.2x default size */
          }
      .login-form {
-        width: 45vw;
+        width: 35vw;
         margin: 0 auto;
-        padding: 0 2vmax;
+
         }
       .login-form .btn {
           font-size: 1.5vmin;
         }
 
      }
- @media all and (max-width: 32em) { /* screen size until 500px */
-     body {
-         font-size: 2.5em; /* 0.8x default size */
-         }
-      .login-form {
-         width: 75vw;
-         margin: 0 auto;
-         padding: 0 2vmax;
-         }
-      .login-form .btn {
-        font-size: 1.5vmax;
-        }
-     }
+ // @media all and (max-width: 32em) { /* screen size until 500px */
+ //     body {
+ //         font-size: 1.5em; /* 0.8x default size */
+ //         }
+ //      .login-form {
+ //         width: 75vw;
+ //         margin: 0 auto;
+ //         padding: 0 2vmax;
+ //         }
+ //      .login-form .btn {
+ //        font-size: 3vmax;
+ //        }
+ //     }
 
 body {
   background-color: #f56d74;
