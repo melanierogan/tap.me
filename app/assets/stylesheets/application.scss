@@ -223,3 +223,23 @@ text-decoration: underline;
 #count:before {
   content: counter(likes);
 }
+
+.post_time {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  font-weight: 200;
+}
+
+.post_choice {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  font-weight: 200;
+}
+
+.post_username {
+  margin: 0 auto;
+  float: none;
+  font-weight: 600;
+}
