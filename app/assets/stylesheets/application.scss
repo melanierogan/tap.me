@@ -20,17 +20,35 @@
      body {
          font-size: 2.5em; /* 1.5x default size */
      }
+     .login-form {
+        width: 35vw;
+        margin: 0 auto;
+        padding: 0 2vmax;
+        }
  }
  @media all and (max-width: 1000px) { /* screen size until 1000px */
      body {
          font-size: 2.2em; /* 1.2x default size */
          }
+         .login-form {
+            width: 45vw;
+            margin: 0 auto;
+            padding: 0 2vmax;
+            }
      }
  @media all and (max-width: 500px) { /* screen size until 500px */
      body {
          font-size: 2.5em; /* 0.8x default size */
          }
+      .login-form {
+         width: 75vw;
+         margin: 0 auto;
+         padding: 0 2vmax;
+         }
      }
+
+
+
 
 body {
   background-color: #f56d74;
@@ -96,11 +114,11 @@ border-color: #ee8a8f;
 .form-control, .btn {
   border-radius: 2px;
 }
-.login-form {
-width: 35vw;
-margin: 0 auto;
-padding: 0 5vmax ;
-}
+// .login-form {
+// width: 35vw;
+// margin: 0 auto;
+// padding: 0 2vmax ;
+// }
 .login-form form {
   color: #7a7a7a;
   border-radius: 2px;
