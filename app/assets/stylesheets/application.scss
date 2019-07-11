@@ -30,11 +30,12 @@
      body {
          font-size: 2.2em; /* 1.2x default size */
          }
-         .login-form {
-            width: 45vw;
-            margin: 0 auto;
-            padding: 0 2vmax;
-            }
+     .login-form {
+        width: 45vw;
+        margin: 0 auto;
+        padding: 0 2vmax;
+        }
+
      }
  @media all and (max-width: 500px) { /* screen size until 500px */
      body {
@@ -114,16 +115,11 @@ border-color: #ee8a8f;
 .form-control, .btn {
   border-radius: 2px;
 }
-// .login-form {
-// width: 35vw;
-// margin: 0 auto;
-// padding: 0 2vmax ;
-// }
+
 .login-form form {
   color: #7a7a7a;
   border-radius: 2px;
   margin-bottom: 15px;
-  font-size: 13px;
   background: #ececec;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
   padding: 30px;
