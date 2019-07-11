@@ -21,10 +21,13 @@
          font-size: 2.5em; /* 1.5x default size */
      }
      .login-form {
-        width: 35vw;
-        margin: 0 auto;
-        padding: 0 2vmax;
-        }
+      width: 35vw;
+      margin: 0 auto;
+      padding: 0 2vmax;
+      }
+    .login-form .btn {
+      font-size: 1.5vmin;
+    }
  }
  @media all and (max-width: 1000px) { /* screen size until 1000px */
      body {
@@ -34,6 +37,9 @@
         width: 45vw;
         margin: 0 auto;
         padding: 0 2vmax;
+        }
+      .login-form .btn {
+          font-size: 1.5vmin;
         }
 
      }
@@ -46,10 +52,10 @@
          margin: 0 auto;
          padding: 0 2vmax;
          }
+      .login-form .btn {
+        font-size: 1.5vmax;
+        }
      }
-
-
-
 
 body {
   background-color: #f56d74;
@@ -150,11 +156,10 @@ width: 100%;
   margin-top: 2px;
 }
 .login-form .btn {
-  font-size: 16px;
   font-weight: bold;
-background: #f56d74;
-border: none;
-margin-bottom: 20px;
+  background: #f56d74;
+  border: none;
+  margin-bottom: 20px;
 }
 .login-form .btn:hover, .login-form .btn:focus {
 background: #f56d74;
