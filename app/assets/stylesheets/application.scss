@@ -16,6 +16,10 @@
 
  @import "bootstrap";
 
+$theme-colors: (
+  "primary": #f56d74,
+  "dark": #0D0D0D
+);
 
 body {
   background-color: #f56d74;
@@ -175,3 +179,8 @@ text-decoration: underline;
 #count:before {
   content: counter(likes);
 }
+.nav li{
+  color: red !important;
+}
+
+
