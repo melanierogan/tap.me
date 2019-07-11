@@ -10,18 +10,21 @@
   </head>
 
   <header>
-  
+
     <% if logged_in? %>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <ul class='nav'>
-    <li class='nav-item'>
-    <%= image_tag('tap_me_logo_p.png', :alt => 'Tap me logo', :style => 'height: 40px') %>
+    <ul class="nav">
+      <li>
+        <%= image_tag('tap_me_logo_p.png', :alt => 'Tap me logo', :style => 'height: 40px') %>
+      </li>
+    <li>
+      <%= link_to 'Posts', posts_path, :style => "color: #f56d74", :class => "nav-link #{active_class('posts', 'index')}" %>
     </li>
-    <li class="nav-item">
-      <%= link_to 'Posts', posts_path, :class => "nav-link #{active_class('posts', 'index')}" %>
+    <li>
+      <%= link_to 'Settings', posts_path, :style => "color: #f56d74", :class => "nav-link #{active_class('posts', 'index')}" %>
     </li>
-    <li class="nav-item">
-      <%= link_to 'Log Out', logout_path, class: "nav-link", method: :delete %>
+    <li>
+      <%= link_to 'Log Out', logout_path, :style => "color: #f56d74", class: "nav-link", method: :delete %>
     </li>
     </ul>
     </nav>
