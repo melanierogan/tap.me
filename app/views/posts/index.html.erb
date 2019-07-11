@@ -21,12 +21,28 @@
 <div id="bum" class="card fluid p-4 <%= p.choice %>">
   <p><%= simple_format(p.body) %></p>
   <p><strong>location:</strong><%= p.address %></p>
-  <p>posted at:<%= p.created_at %></p>
-  <p>posted by:<%= User.find(p.user_id).username %></p>
-    <div>
-      <%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{p.latitude},#{p.longitude}&markers=#{p.latitude},#{p.longitude}&zoom=17&size=640x400&key=#{ENV['GOOGLE_API_KEY']}",
-    class: 'img-fluid img-rounded', alt: '#{p.address} on the map'%>
+    <%= User.find(p.user_id).username %><br>
+  <%= time_calculation(p.created_at) %>
+  <div>
+ <%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{p.latitude},#{p.longitude}&markers=#{p.latitude},#{p.longitude}&zoom=17&size=320x200&key=#{ENV['GOOGLE_API_KEY']}",
+   class: 'img-fluid img-rounded', alt: '#{p.address} on the map'%>
+   </div>
+  <% if current_user.username == p.user.username %>
+    <div class="col-sm" align="center">
+      <%= link_to 'Update', edit_post_path(p), :class => "btn btn-outline-light" %>
     </div>
+    <div class="col-sm" align="right">
+      <%= link_to 'Delete', post_path(p), :class => "btn btn-outline-secondary",
+      method: :delete,
+      data: { confirm: 'Are you sure?' } %>
+    </div>
+  <% else %>
+  <div class="col-sm">
+  </div>
+  <div class="col-sm">
+  </div>
+  <% end %>
+
 </div>
    <br><br>
 <% end %>

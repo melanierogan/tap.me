@@ -1,0 +1,16 @@
+<h1>Your post<h1>
+
+
+
+  <%= form_with(model: @post, local: true) do |form| %>
+  <div class="form-group">
+    <%= form.label :choice %><br>
+    <%= form.select :choice, [['Emotion'],['Action']] %><br>
+    <%= form.label :post %><br>
+    <%= form.text_area :body, :class => "form-control", :size => "20x5" %><br>
+    <%= form.label :address %><br>
+    <%= form.text_area :address %><br>
+
+  </div>
+  <%= form.submit 'Save Post', :class => "btn btn-outline-primary" %>
+<% end %>
