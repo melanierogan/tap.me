@@ -4,29 +4,30 @@
     $(document).ready(function() {
       $('#bum_toggle').change(function (){
         if(this.checked)
-          $('#bum').hide();
+          $('.Emotion').hide();
         else
-          $('#bum').show();
+          $('.Emotion').show();
       })
     });
 
     </script>
-<p>posts is saved</p>
+
       <div class="container fluid" align="center">
         <input class="toggle" id="bum_toggle" type="checkbox" />
       </div>
 
 
-<div class="card fluid p-4">
 <% @posts.each do |p| %>
-  <p id="bum"><%= p.choice %></p>
+<div id="bum" class="card fluid p-4 <%= p.choice %>">
   <p><%= simple_format(p.body) %></p>
-  <p><%= p.address %></p>
-  <p><%= p.created_at %></p>
-  <p><%= User.find(p.user_id).username %></p>
-  <div>
- <%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{p.latitude},#{p.longitude}&markers=#{p.latitude},#{p.longitude}&zoom=17&size=640x400&key=#{ENV['GOOGLE_API_KEY']}",
-   class: 'img-fluid img-rounded', alt: '#{p.address} on the map'%>
-   </div>
-  <% end %>
+  <p><strong>location:</strong><%= p.address %></p>
+  <p>posted at:<%= p.created_at %></p>
+  <p>posted by:<%= User.find(p.user_id).username %></p>
+    <div>
+      <%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{p.latitude},#{p.longitude}&markers=#{p.latitude},#{p.longitude}&zoom=17&size=640x400&key=#{ENV['GOOGLE_API_KEY']}",
+    class: 'img-fluid img-rounded', alt: '#{p.address} on the map'%>
+    </div>
 </div>
+   <br><br>
+<% end %>
+
