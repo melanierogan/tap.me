@@ -2,7 +2,7 @@
 <script type="text/javascript">
 
     $(document).ready(function() {
-      $('#bum_toggle').change(function (){
+      $('#mol_toggle').change(function (){
         if(this.checked)
           $('.Emotion').hide();
         else
@@ -13,12 +13,12 @@
     </script>
 
       <div class="container fluid" align="center">
-        <input class="toggle" id="bum_toggle" type="checkbox" />
+        <input class="toggle" id="mol_toggle" type="checkbox" />
       </div>
 
 
 <% @posts.each do |p| %>
-<div id="bum" class="card fluid p-4 <%= p.choice %>">
+<div class="card fluid p-4 <%= p.choice %>">
   <p><%= simple_format(p.body) %></p>
   <p><strong>location:</strong><%= p.address %></p>
     <%= User.find(p.user_id).username %><br>
