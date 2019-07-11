@@ -16,10 +16,8 @@
 
  @import "bootstrap";
 
-$theme-colors: (
-  "primary": #f56d74,
-  "dark": #0D0D0D
-);
+ $tap_me_pink: #f56d74;
+ $tap_me_pink_dark: #7A363A;
 
 body {
   background-color: #f56d74;
@@ -178,4 +176,18 @@ text-decoration: underline;
 }
 #count:before {
   content: counter(likes);
+}
+#text-primary {
+  color: #f56d74;
+}
+//
+// .pink-theme {
+//   color: $tap_me_pink;
+// }
+.nav-link {
+    color: $tap_me_pink;
+    transition: color 0.4s ease;
+}
+.nav-link:hover{
+    color: $tap_me_pink_dark;
 }
