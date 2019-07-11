@@ -57,19 +57,19 @@
         }
 
      }
- // @media all and (max-width: 32em) { /* screen size until 500px */
- //     body {
- //         font-size: 1.5em; /* 0.8x default size */
- //         }
- //      .login-form {
- //         width: 75vw;
- //         margin: 0 auto;
- //         padding: 0 2vmax;
- //         }
- //      .login-form .btn {
- //        font-size: 3vmax;
- //        }
- //     }
+ @media all and (max-width: 32em) { /* screen size until 500px */
+     body {
+         font-size: 1em; /* 0.8x default size */
+         }
+      .login-form {
+         width: 75vw;
+         margin: 0 auto;
+         padding: 0 2vmax;
+         }
+      .login-form .btn {
+        font-size: 1em;
+        }
+     }
 
 body {
   background-color: #f56d74;
