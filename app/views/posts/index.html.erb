@@ -1,11 +1,27 @@
-<p>posts is saved</p>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
 
-<div class="card fluid p-4">
+    $(document).ready(function() {
+      $('#mol_toggle').change(function (){
+        if(this.checked)
+          $('.Emotion').hide();
+        else
+          $('.Emotion').show();
+      })
+    });
+
+    </script>
+
+      <div class="container fluid" align="center">
+        <input class="toggle" id="mol_toggle" type="checkbox" />
+      </div>
+
+
 <% @posts.each do |p| %>
-  <%= p.choice %><br>
-  <%= simple_format(p.body) %><br>
-  <%= p.address %><br>
-  <%= User.find(p.user_id).username %><br>
+<div class="card fluid p-4 <%= p.choice %>">
+  <p><%= simple_format(p.body) %></p>
+  <p><strong>location:</strong><%= p.address %></p>
+    <%= User.find(p.user_id).username %><br>
   <%= time_calculation(p.created_at) %>
   <div>
  <%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{p.latitude},#{p.longitude}&markers=#{p.latitude},#{p.longitude}&zoom=17&size=320x200&key=#{ENV['GOOGLE_API_KEY']}",
@@ -26,5 +42,8 @@
   <div class="col-sm">
   </div>
   <% end %>
-<% end %>
+
 </div>
+   <br><br>
+<% end %>
+

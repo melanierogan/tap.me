@@ -1,11 +1,18 @@
 class PostsController < ApplicationController
+  before_action :require_user
+  before_action :correct_user, only:[:edit, :update, :destroy]
   helper_method :time_calculation
+
   def index
     @posts = []
     @all_posts = Post.all
     @all_posts.each do |p|
     @posts << p if (Time.new - p.created_at) < 86400
     end
+  end
+
+  def show
+    @post = Post.find(params[:id])
   end
 
   def new
@@ -62,5 +69,8 @@ end
   private
   def post_params
     params.require(:post).permit(:choice, :body, :address)
+  end
+  def correct_user
+    @post = Post.find(params[:id])
   end
 end

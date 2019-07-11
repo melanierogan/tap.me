@@ -9,6 +9,16 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+  <header>
+    <nav>
+    <% if logged_in? %>
+    <li class="nav-item">
+        <%= link_to 'Log Out', logout_path, class: "nav-link", method: :delete %>
+    </li>
+    <% end %>
+    </nav>
+  </header>
+
   <body>
   <div class="container">
     <div class="row justify-content-md-center">
@@ -19,10 +29,11 @@
         <div class="container fluid" align="center">
         <img src="https://user-images.githubusercontent.com/16557524/60904812-a54d0780-a26b-11e9-8cdc-a4b3ccfba0fd.png" class="img-fluid" style="align: center;">
       </div>
+
       <%= yield %>
       </div>
       </div>
-      <div class="col col-lg-2">   
+      <div class="col col-lg-2">
       </div>
     </div>
   </div>
