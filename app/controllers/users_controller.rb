@@ -11,7 +11,7 @@ class UsersController < ApplicationController
     if @user.save
       session[:user_id] = @user.id
       flash[:success] = "Welcome #{@user.username}"
-      redirect_to testpost_path
+      redirect_to posts_path
     else
       render 'new'
     end
@@ -25,7 +25,7 @@ class UsersController < ApplicationController
     @user = current_user
     if @user.update(user_params)
       flash[:success] = "Updated!"
-      redirect_to testpost_path
+      redirect_to posts_path
     else
       flash[:error] = "You shall not pass!"
       render 'edit'

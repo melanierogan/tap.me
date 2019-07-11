@@ -1,2 +1,27 @@
-<h1>Sessions#new</h1>
-<p>Find me in app/views/sessions/new.html.erb</p>
+<div class="container-fluid">
+  <div class="row melcolor">
+    <div class="col melcolor" >
+      <div class="melcolor" id="who" style="width: 60rem;">
+        <div class="login-form" style="padding-top: 50px;">
+          <%= form_for :session, url: login_path do |f| %>
+            <div class="avatar">
+            </div>
+            <h2></h2>
+            <div class="form-group">
+              <%= f.label :email %>
+              <%= f.email_field :email, class: "form-control", placeholder: "Enter email" %>
+            </div>
+            <div class="form-group">
+              <%= f.label :password %>
+              <%= f.password_field :password, class: "form-control", placeholder: "Password" %>
+            </div>
+            <%= f.submit 'Log In', class: "btn btn-primary btn-lg btn-block" %>
+          <% end %>
+            <p class="text-center small">Don't have an account? <a href="/signup">Sign up here!</a></p>
+            <div class="col melcolor">
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
