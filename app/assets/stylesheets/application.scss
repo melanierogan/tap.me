@@ -16,7 +16,7 @@
 
  @import "bootstrap";
 
- @media all and (max-width: 1200px) { /* screen size until 1200px */
+ @media all and (max-width: 75em) { /* screen size until 1200px */
      body {
          font-size: 2.5em; /* 1.5x default size */
      }
@@ -29,7 +29,7 @@
       font-size: 1.5vmin;
     }
  }
- @media all and (max-width: 1000px) { /* screen size until 1000px */
+ @media all and (max-width: 62em) { /* screen size until 1000px */
      body {
          font-size: 2.2em; /* 1.2x default size */
          }
@@ -43,7 +43,7 @@
         }
 
      }
- @media all and (max-width: 500px) { /* screen size until 500px */
+ @media all and (max-width: 32em) { /* screen size until 500px */
      body {
          font-size: 2.5em; /* 0.8x default size */
          }
