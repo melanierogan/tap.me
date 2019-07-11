@@ -17,9 +17,13 @@
       </div>
 
 <br><br>
+
+
+
+
 <% @posts.each do |p| %>
 <div class="card fluid p-4 <%= p.choice %>">
-
+<%= render 'map' %>
     <p class="card-link post_choice"><%= p.choice %></p>
     <p class="post_avatar post_username"><%= User.find(p.user_id).username %></p>
     <p class="card-link post_time"><%= time_calculation(p.created_at) %></p>
@@ -48,4 +52,3 @@
 </div>
 <br><br><br><br>
 <% end %>
-
