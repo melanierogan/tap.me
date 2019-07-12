@@ -14,6 +14,7 @@
 
       <div class="container fluid" align="center">
         <input class="toggle" id="mol_toggle" type="checkbox" />
+          <%= link_to '+', new_post_path, class: "btn btn-outline-secondary btn-circle float-right", style: "padding-top: 2px", id: "new_post" %>
       </div>
 
 <br><br>
@@ -25,7 +26,7 @@
     <p class="card-link post_time"><%= time_calculation(p.created_at) %></p>
     <br><br>
     <p class="p-2"><%= simple_format(p.body, class: 'text-center') %></p>
-    
+
   <div class="container fluid">
   <figure class="figure">
     <%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{p.latitude},#{p.longitude}&markers=#{p.latitude},#{p.longitude}&zoom=17&size=640x200&key=#{ENV['GOOGLE_API_KEY']}",
@@ -35,13 +36,13 @@
   </div>
   <% if current_user.username == p.user.username %>
   <div class="container fluid">
-    
+
       <%= link_to 'Update', edit_post_path(p), :class => "btn btn-outline-secondary" %>
-   
+
       <%= link_to 'Delete', post_path(p), :class => "btn btn-outline-secondary",
       method: :delete,
       data: { confirm: 'Are you sure?' } %>
-   
+
     </div>
   <% else %>
 
@@ -49,4 +50,3 @@
 </div>
 <br><br><br><br>
 <% end %>
-
