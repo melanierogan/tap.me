@@ -10,7 +10,14 @@ class EndPointTest < ApplicationSystemTestCase
     click_on('Sign Up')
     assert_text 'Posts'
   end
-  # test 'end to end test' do
+  test 'log_in' do
+    visit '/'
+    fill_in 'session[email]', with: 'mel@mel.com'
+    fill_in 'session[password]', with: '1234567'
+    click_on('Log In')
+    assert_text 'Posts'
+  end
+    # test 'end to end test' do
   #   visit signup_url
   #   fill_in 'user[username]', with: 'Jayda'
   #   fill_in 'user[email]', with: 'jay@jay.com'
