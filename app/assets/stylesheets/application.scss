@@ -305,6 +305,7 @@ text-decoration: underline;
 }
 .nav-link:hover{
     color: $tap_me_pink_dark;
+    transition: color 0.4s ease;
 }
 
 /* Dropdown Button */
