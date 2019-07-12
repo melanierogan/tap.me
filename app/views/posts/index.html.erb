@@ -23,6 +23,12 @@
   <p><strong>location:</strong><%= p.address %></p>
     <%= User.find(p.user_id).username %><br>
   <%= time_calculation(p.created_at) %>
+  location = []
+  function addLocation(){
+    for i = 0; i <= p.length; i++
+    lat =
+    location << p.latitude
+  }
   <div>
  <%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{p.latitude},#{p.longitude}&markers=#{p.latitude},#{p.longitude}&zoom=17&size=320x200&key=#{ENV['GOOGLE_API_KEY']}",
    class: 'img-fluid img-rounded', alt: '#{p.address} on the map'%>
