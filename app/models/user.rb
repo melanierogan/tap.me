@@ -22,4 +22,6 @@ class User < ApplicationRecord
 
   has_secure_password
 
+  row_to_json(record [, pretty_bool])
+
 end
