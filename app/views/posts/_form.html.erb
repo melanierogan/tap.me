@@ -8,7 +8,7 @@
             <div class="form-group">
               <%= form.label :choice %><br>
               <%= form.select :choice, options_for_select(['Emotion', 'Action']), {}, { :class => 'form-control col-lg' } %>
-             
+
             </div>
             <div class="form-group">
               <%= form.label :post %>
@@ -18,6 +18,7 @@
               <%= form.label :address %>
               <%= form.text_area :address, class: "form-control", placeholder: "Address" %>
             </div>
+            <%= link_to 'Cancel', posts_path, class: "btn btn-primary" %>
             <%= form.submit 'Save Post', :class => "btn btn-primary" %>
           <% end %>
             <div class="col melcolor">

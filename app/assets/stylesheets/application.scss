@@ -20,7 +20,7 @@
      body {
          font-size: 24px; /* 1.5x default size */
      }
-   
+
     .post_time {
       font-size: 26px;
     }
@@ -275,12 +275,12 @@ text-decoration: underline;
 }
 
 .btn:hover {
-  color: #f56d74 !important;
+  background-color: #dc6268 !important;
   text-decoration: none;
 }
 .btn:focus,
 .btn.focus {
-  color: #f56d74 !important;
+  background-color: #dc6268 !important;
   text-decoration: none;
 }
 
@@ -342,4 +342,3 @@ text-decoration: underline;
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
-
