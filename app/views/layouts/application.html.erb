@@ -24,7 +24,9 @@
     <li class="nav-item dropdown">
       <button onclick="myFunction()" class="dropbtn">Settings ▾</button>
       <div id="myDropdown" class="dropdown-content">
-      <a href="#">Delete Account</a>
+      <%= link_to 'Delete Account', user_path(current_user), class: "nav-link", :style => "color: #f56d74",
+        method: :delete,
+        data: { confirm: 'Are you sure?' } %>
     </li>
     <li class="nav-item">
       <%= link_to 'Log Out', logout_path, :class => "nav-link", method: :delete %>
