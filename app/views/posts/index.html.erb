@@ -14,18 +14,20 @@
 
       <div class="container fluid" align="center">
         <input class="toggle" id="mol_toggle" type="checkbox" />
+        <%= link_to '+', new_post_path, class: "btn btn-outline-secondary btn-circle float-right", style: "padding-top: 2px", id: "new_post" %>
       </div>
 
 <br><br><br>
 <% @posts.each do |p| %>
 <div class="card fluid p-4 <%= p.choice %>">
+
     <p class="post_username"><%= User.find(p.user_id).username %></p>
     <div class="d-flex justify-content-between">
     <p class="post_choice"><%= p.choice %></p>
     <p class="post_time"><%= time_calculation(p.created_at) %></p>
     </div>
     <p><%= simple_format(p.body, class: 'text-center') %></p>
-    
+
   <div class="container fluid">
   <figure class="figure">
     <%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{p.latitude},#{p.longitude}&markers=#{p.latitude},#{p.longitude}&zoom=17&size=640x200&key=#{ENV['GOOGLE_API_KEY']}",
@@ -36,12 +38,13 @@
   <% if current_user.username == p.user.username %>
   <div class="container fluid d-flex justify-content-between">
     
+
       <%= link_to 'Update', edit_post_path(p), :class => "btn btn-outline-secondary" %>
-   
+
       <%= link_to 'Delete', post_path(p), :class => "btn btn-outline-secondary",
       method: :delete,
       data: { confirm: 'Are you sure?' } %>
-   
+
     </div>
   <% else %>
 
@@ -52,4 +55,3 @@
 <br class="<%= p.choice %>">
 <br class="<%= p.choice %>">
 <% end %>
-
