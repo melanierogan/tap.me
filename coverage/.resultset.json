@@ -216,17 +216,6 @@
         0,
         0,
         0,
-        null,
-        0,
-        0,
-        null,
-        null,
-        null,
-        1,
-        0,
-        0,
-        0,
-        0,
         0,
         null,
         null,
@@ -237,37 +226,8 @@
         null,
         null,
         null
-      ],
-      "/Users/manisha.patel/Project/tap_me/app/mailers/application_mailer.rb": [
-        0,
-        0,
-        0,
-        0
-      ],
-      "/Users/manisha.patel/Project/tap_me/app/jobs/application_job.rb": [
-        0,
-        0
-      ],
-      "/Users/manisha.patel/Project/tap_me/app/controllers/toggle_controller.rb": [
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "/Users/manisha.patel/Project/tap_me/app/channels/application_cable/connection.rb": [
-        0,
-        0,
-        0,
-        0
-      ],
-      "/Users/manisha.patel/Project/tap_me/app/channels/application_cable/channel.rb": [
-        0,
-        0,
-        0,
-        0
       ]
     },
-    "timestamp": 1562942354
+    "timestamp": 1562942909
   }
 }

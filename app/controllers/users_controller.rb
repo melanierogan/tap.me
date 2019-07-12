@@ -21,17 +21,6 @@ class UsersController < ApplicationController
     @user = current_user
   end
 
-  def update
-    @user = current_user
-    if @user.update(user_params)
-      flash[:success] = "Updated!"
-      redirect_to posts_path
-    else
-      flash[:error] = "You shall not pass!"
-      render 'edit'
-    end
-  end
-
   def destroy
     @user = User.find(params[:id])
     @user.destroy
