@@ -12,7 +12,7 @@
 
     </script>
 
-      <div class="container fluid" align="center">
+      <div class="container fluid" align="left">
         <input class="toggle" id="mol_toggle" type="checkbox" />
         <%= link_to '+', new_post_path, class: "btn btn-secondary btn-circle float-right", style: "padding-top: 2px", id: "new_post" %>
       </div>
@@ -37,7 +37,7 @@
   </div>
   <% if current_user.username == p.user.username %>
   <div class="container fluid d-flex justify-content-between">
-    
+
 
       <%= link_to 'Update', edit_post_path(p), :class => "btn btn-outline-secondary" %>
 
