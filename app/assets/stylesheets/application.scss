@@ -180,10 +180,10 @@ text-decoration: underline;
 #text-primary {
   color: #f56d74;
 }
-//
-// .pink-theme {
-//   color: $tap_me_pink;
-// }
+
+.pink-theme {
+  color: $tap_me_pink;
+}
 .nav-link {
     color: $tap_me_pink;
     transition: color 0.4s ease;
@@ -191,3 +191,47 @@ text-decoration: underline;
 .nav-link:hover{
     color: $tap_me_pink_dark;
 }
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: white;
+  color: #7f7f7f;
+  padding: 8px;
+  font-size: 16px;
+  border: none;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  color: black;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: $tap_me_pink;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
