@@ -4,11 +4,10 @@
       <div class="melcolor" id="who">
         <div class="login-form">
           <%= form_with(model: @post, local: true) do |form| %>
-            <h2>New Post</h2>
+            <h2 class="text-center">New Post</h2>
             <div class="form-group">
               <%= form.label :choice %><br>
               <%= form.select :choice, options_for_select(['Emotion', 'Action']), {}, { :class => 'form-control col-lg' } %>
-
             </div>
             <div class="form-group">
               <%= form.label :post %>
@@ -18,8 +17,16 @@
               <%= form.label :address %>
               <%= form.text_area :address, class: "form-control", placeholder: "Address" %>
             </div>
-            <%= link_to 'Cancel', posts_path, class: "btn btn-primary" %>
-            <%= form.submit 'Save Post', :class => "btn btn-primary" %>
+            <div class="container">
+              <div class="row text-center">
+                <div class="col-lg">
+                  <%= link_to 'Cancel', posts_path, class: "btn btn-secondary" %>
+                </div>
+                <div class="col-lg">
+                <%= form.submit 'Save Post', :class => "btn btn-primary" %>
+                </div>
+              </div>
+            </div>
           <% end %>
             <div class="col melcolor">
             </div>

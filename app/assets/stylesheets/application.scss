@@ -62,6 +62,7 @@
 
  $tap_me_pink: #f56d74;
  $tap_me_pink_dark: #7A363A;
+ $tap_me_grey: #dc6268;
 
 body {
   background-color: #f56d74;
@@ -166,20 +167,27 @@ width: 100%;
   background: #f56d74;
   border: none;
   margin-bottom: 20px;
+  border-radius: 50px;
+  display: block;
+  width: 100%;
+  text-decoration: none;
 }
 .login-form .btn:hover, .login-form .btn:focus {
 background: #f56d74;
   outline: none !important;
+  text-decoration: none;
 }
 .login-form a {
 color: #fff;
 text-decoration: underline;
+border-radius: 50px;
+width: 100%;
 }
 .login-form a:hover {
 text-decoration: none;
 }
 .login-form form a {
-color: #7a7a7a;
+color: white;
 text-decoration: none;
 }
 .login-form form a:hover {
