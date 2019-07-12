@@ -23,11 +23,12 @@
     <p class="card-link post_choice"><%= p.choice %></p>
     <p class="post_avatar post_username"><%= User.find(p.user_id).username %></p>
     <p class="card-link post_time"><%= time_calculation(p.created_at) %></p>
-    <p class="p-2"><%= simple_format(p.body) %></p>
+    <br><br>
+    <p class="p-2"><%= simple_format(p.body, class: 'text-center') %></p>
     
   <div class="container fluid">
   <figure class="figure">
-    <%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{p.latitude},#{p.longitude}&markers=#{p.latitude},#{p.longitude}&zoom=17&size=320x200&key=#{ENV['GOOGLE_API_KEY']}",
+    <%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{p.latitude},#{p.longitude}&markers=#{p.latitude},#{p.longitude}&zoom=17&size=640x200&key=#{ENV['GOOGLE_API_KEY']}",
    class: 'figure-img img-fluid', alt: '#{p.address} on the map'%>
    <figcaption class="figure-caption text-right"><%= p.address %></figcaption>
    </figure>
