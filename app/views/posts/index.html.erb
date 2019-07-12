@@ -4,9 +4,9 @@
     $(document).ready(function() {
       $('#mol_toggle').change(function (){
         if(this.checked)
-          $('.Emotion').hide();
+          $('.Emotion').hide() && $('.Action').show();
         else
-          $('.Emotion').show();
+          $('.Emotion').show() && $('.Action').hide();
       })
     });
 
@@ -14,36 +14,44 @@
 
       <div class="container fluid" align="center">
         <input class="toggle" id="mol_toggle" type="checkbox" />
+        <%= link_to '+', new_post_path, class: "btn btn-secondary btn-circle float-right", style: "padding-top: 2px", id: "new_post" %>
       </div>
 
-
+<br><br><br>
 <% @posts.each do |p| %>
 <div class="card fluid p-4 <%= p.choice %>">
-  <p><%= simple_format(p.body) %></p>
-  <p><strong>location:</strong><%= p.address %></p>
-    <%= User.find(p.user_id).username %><br>
-  <%= time_calculation(p.created_at) %>
 
-  <div>
- <%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{p.latitude},#{p.longitude}&markers=#{p.latitude},#{p.longitude}&zoom=17&size=320x200&key=#{ENV['GOOGLE_API_KEY']}",
-   class: 'img-fluid img-rounded', alt: '#{p.address} on the map'%>
-   </div>
-  <% if current_user.username == p.user.username %>
-    <div class="col-sm" align="center">
-      <%= link_to 'Update', edit_post_path(p), :class => "btn btn-outline-light" %>
+    <p class="post_username"><%= User.find(p.user_id).username %></p>
+    <div class="d-flex justify-content-between">
+    <p class="post_choice"><%= p.choice %></p>
+    <p class="post_time"><%= time_calculation(p.created_at) %></p>
     </div>
-    <div class="col-sm" align="right">
+    <p><%= simple_format(p.body, class: 'text-center') %></p>
+
+  <div class="container fluid">
+  <figure class="figure">
+    <%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{p.latitude},#{p.longitude}&markers=#{p.latitude},#{p.longitude}&zoom=17&size=640x200&key=#{ENV['GOOGLE_API_KEY']}",
+   class: 'figure-img img-fluid', alt: '#{p.address} on the map'%>
+   <figcaption class="figure-caption text-right"><%= p.address %></figcaption>
+   </figure>
+  </div>
+  <% if current_user.username == p.user.username %>
+  <div class="container fluid d-flex justify-content-between">
+    
+
+      <%= link_to 'Update', edit_post_path(p), :class => "btn btn-outline-secondary" %>
+
       <%= link_to 'Delete', post_path(p), :class => "btn btn-outline-secondary",
       method: :delete,
       data: { confirm: 'Are you sure?' } %>
+
     </div>
   <% else %>
-  <div class="col-sm">
-  </div>
-  <div class="col-sm">
-  </div>
-  <% end %>
 
+  <% end %>
 </div>
-   <br><br>
+<br class="<%= p.choice %>">
+<br class="<%= p.choice %>">
+<br class="<%= p.choice %>">
+<br class="<%= p.choice %>">
 <% end %>
