@@ -16,6 +16,50 @@
 
  @import "bootstrap";
 
+ @media (max-width: 110em) {
+     body {
+         font-size: 24px; /* 1.5x default size */
+     }
+   
+    .post_time {
+      font-size: 26px;
+    }
+    .post_username {
+      font-size: 26px;
+    }
+    .post_choice {
+      font-size: 26px;
+    }
+ }
+
+ @media all and (max-width: 75em) { /* screen size until 1200px */
+     body {
+         font-size: 2.5em; /* 1.5x default size */
+     }
+     .login-form {
+      width: 25vw;
+      margin: 0 auto;
+      // padding: 0 4vmax;
+      }
+    .login-form .btn {
+      font-size: 1.5vmin;
+    }
+ }
+
+ @media all and (max-width: 32em) { /* screen size until 500px */
+     body {
+         font-size: 1em; /* 0.8x default size */
+         }
+      .login-form {
+         width: 75vw;
+         margin: 0 auto;
+         padding: 0 2vmax;
+         }
+      .login-form .btn {
+        font-size: 1em;
+        }
+     }
+
  $tap_me_pink: #f56d74;
  $tap_me_pink_dark: #7A363A;
 
@@ -83,16 +127,11 @@ border-color: #ee8a8f;
 .form-control, .btn {
   border-radius: 2px;
 }
-.login-form {
-width: 350px;
-margin: 0 auto;
-padding: 100px 0 30px;
-}
+
 .login-form form {
   color: #7a7a7a;
   border-radius: 2px;
   margin-bottom: 15px;
-  font-size: 13px;
   background: #ececec;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
   padding: 30px;
@@ -123,11 +162,10 @@ width: 100%;
   margin-top: 2px;
 }
 .login-form .btn {
-  font-size: 16px;
   font-weight: bold;
-background: #f56d74;
-border: none;
-margin-bottom: 20px;
+  background: #f56d74;
+  border: none;
+  margin-bottom: 20px;
 }
 .login-form .btn:hover, .login-form .btn:focus {
 background: #f56d74;
@@ -177,6 +215,75 @@ text-decoration: underline;
 #count:before {
   content: counter(likes);
 }
+
+
+.post_time {
+  // position: absolute;
+  // top: 1em;
+  // right: 1em;
+  font-weight: 200;
+}
+
+.post_choice {
+  // position: absolute;
+  // top: 1em;
+  // left: 1em;
+  font-weight: 200;
+}
+
+.post_username {
+  text-align: center;
+  // padding-top: 1em;
+  // margin: 0 auto;
+  // float: none;
+}
+
+
+.post_avatar {
+  position: relative;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: -70px;
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  z-index: 9;
+  background: #c7c0c0;
+  padding: 15px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+  text-align: center;
+ }
+
+  .btn-circle {
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  text-decoration: none
+}
+
+.btn-secondary {
+  color: #f56d74;
+  background: white;
+  border: white;
+}
+
+.btn:hover {
+  color: #f56d74 !important;
+  text-decoration: none;
+}
+.btn:focus,
+.btn.focus {
+  color: #f56d74 !important;
+  text-decoration: none;
+}
+
 #text-primary {
   color: #f56d74;
 }
@@ -235,3 +342,4 @@ text-decoration: underline;
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
+

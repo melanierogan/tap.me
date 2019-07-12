@@ -5,7 +5,7 @@ class PostsController < ApplicationController
 
   def index
     @posts = []
-    @all_posts = Post.all
+    @all_posts = Post.all.order(created_at: :desc)
     @all_posts.each do |p|
     @posts << p if (Time.new - p.created_at) < 86400
     end
