@@ -35,7 +35,7 @@ class UsersController < ApplicationController
   def destroy
     @user = User.find(params[:id])
     @user.destroy
-    session[:user_id] = 0
+    session[:user_id] = nil
     flash[:success] = 'You have been destroyed!'
     redirect_to login_path
   end
