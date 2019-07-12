@@ -263,3 +263,19 @@ text-decoration: underline;
   font-size: 35px;
   text-decoration: none
 }
+
+.btn-secondary {
+  color: #f56d74;
+  background: white;
+  border: white;
+}
+
+.btn:hover {
+  color: #f56d74 !important;
+  text-decoration: none;
+}
+.btn:focus,
+.btn.focus {
+  color: #f56d74 !important;
+  text-decoration: none;
+}
