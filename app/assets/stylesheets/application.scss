@@ -16,50 +16,6 @@
 
  @import "bootstrap";
 
- @media (max-width: 110em) {
-     body {
-         font-size: 24px; /* 1.5x default size */
-     }
-
-    .post_time {
-      font-size: 26px;
-    }
-    .post_username {
-      font-size: 26px;
-    }
-    .post_choice {
-      font-size: 26px;
-    }
- }
-
- @media all and (max-width: 75em) { /* screen size until 1200px */
-     body {
-         font-size: 2.5em; /* 1.5x default size */
-     }
-     .login-form {
-      width: 25vw;
-      margin: 0 auto;
-      // padding: 0 4vmax;
-      }
-    .login-form .btn {
-      font-size: 1.5vmin;
-    }
- }
-
- @media all and (max-width: 32em) { /* screen size until 500px */
-     body {
-         font-size: 1em; /* 0.8x default size */
-         }
-      .login-form {
-         width: 75vw;
-         margin: 0 auto;
-         padding: 0 2vmax;
-         }
-      .login-form .btn {
-        font-size: 1em;
-        }
-     }
-
  $tap_me_pink: #f56d74;
  $tap_me_pink_dark: #7A363A;
  $tap_me_grey: #dc6268;
@@ -364,3 +320,19 @@ text-decoration: underline;
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
+
+@media only screen and (max-width: 600px) {
+  .login-form .btn {
+    margin-bottom: 0px;
+  }
+  .login-form form {
+    color: #7a7a7a;
+    border-radius: 2px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    background: #ececec;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    position: relative;
+  }
+}
