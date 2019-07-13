@@ -36,16 +36,18 @@
    </figure>
   </div>
   <% if current_user.username == p.user.username %>
-  <div class="container fluid d-flex justify-content-between">
-
-
-      <%= link_to 'Update', edit_post_path(p), :class => "btn btn-outline-secondary" %>
-
-      <%= link_to 'Delete', post_path(p), :class => "btn btn-outline-secondary",
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-lg">
+      <%= link_to 'Update', edit_post_path(p), :class => "btn btn-tertiary" %>
+      </div>
+      <div class="col-lg">
+      <%= link_to 'Delete', post_path(p), :class => "btn btn-tertiary",
       method: :delete,
       data: { confirm: 'Are you sure?' } %>
-
+      </div>
     </div>
+  </div>
   <% else %>
 
   <% end %>

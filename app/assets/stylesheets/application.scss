@@ -282,15 +282,28 @@ text-decoration: underline;
   border: white;
 }
 
+.btn-tertiary {
+  border-radius: 50px;
+  color: white;
+  background-color: $tap_me_pink;
+  width: 100%;
+}
+
+.btn-tertiary:hover {
+  color: white;
+  background-color: green !important;
+}
+
+
 .btn:hover {
   background-color: #dc6268 !important;
   text-decoration: none;
 }
-.btn:focus,
-.btn.focus {
-  background-color: #dc6268 !important;
-  text-decoration: none;
-}
+// .btn:focus,
+// .btn.focus {
+//   background-color: #dc6268 !important;
+//   text-decoration: none;
+// }
 
 #text-primary {
   color: #f56d74;

@@ -4,7 +4,7 @@
       <div class="melcolor" id="who">
         <div class="login-form">
           <%= form_with(model: @post, local: true) do |form| %>
-            <h2 class="text-center">New Post</h2>
+            <h2 class="text-center">My Post</h2>
             <div class="form-group">
               <%= form.label :choice %><br>
               <%= form.select :choice, options_for_select(['Emotion', 'Action']), {}, { :class => 'form-control col-lg' } %>
