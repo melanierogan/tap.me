@@ -74,12 +74,12 @@ body {
 
 .form-control {
   min-height: 41px;
-background: #fff;
-box-shadow: none !important;
-border-color: #e3e3e3;
+  background: #fff;
+  box-shadow: none !important;
+  border-color: #e3e3e3;
 }
 .form-control:focus {
-border-color: #ee8a8f;
+  border-color: #ee8a8f;
 }
 .form-control, .btn {
   border-radius: 2px;
@@ -95,25 +95,25 @@ border-color: #ee8a8f;
   position: relative;
 }
 .login-form h2 {
-font-size: 22px;
+  font-size: 22px;
   margin: 35px 0 25px;
 }
 .login-form .avatar {
-position: absolute;
-margin: 0 auto;
-left: 0;
-right: 0;
-top: -50px;
-width: 95px;
-height: 95px;
-border-radius: 50%;
-z-index: 9;
-background: #f56d74;
-padding: 15px;
-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: -50px;
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  z-index: 9;
+  background: #f56d74;
+  padding: 15px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
 }
 .login-form .avatar img {
-width: 100%;
+  width: 100%;
 }
 .login-form input[type="checkbox"] {
   margin-top: 2px;
@@ -129,25 +129,99 @@ width: 100%;
   text-decoration: none;
 }
 .login-form .btn:hover, .login-form .btn:focus {
-background: #f56d74;
+  background: #f56d74;
   outline: none !important;
   text-decoration: none;
 }
 .login-form a {
-color: #fff;
-text-decoration: underline;
-border-radius: 50px;
-width: 100%;
+  color: #fff;
+  text-decoration: underline;
+  border-radius: 50px;
+  width: 100%;
 }
 .login-form a:hover {
-text-decoration: none;
-}
-.login-form form a {
-color: white;
-text-decoration: none;
+  text-decoration: none;
+  }
+  .login-form form a {
+  color: white;
+  text-decoration: none;
 }
 .login-form form a:hover {
-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.login-text {
+  padding-top: 10px;
+}
+
+// //
+.post-form form {
+  color: #7a7a7a;
+  border-radius: 2px;
+  margin-bottom: 15px;
+  background: #ececec;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  padding: 30px;
+  position: relative;
+}
+.post-form h2 {
+  font-size: 22px;
+  margin: 35px 0 25px;
+}
+.post-form .avatar {
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: -50px;
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  z-index: 9;
+  background: #f56d74;
+  padding: 15px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+.post-form .avatar img {
+  width: 100%;
+}
+.post-form input[type="checkbox"] {
+  margin-top: 2px;
+}
+.post-form .btn {
+  font-weight: bold;
+  background: #f56d74;
+  border: none;
+  margin-bottom: 20px;
+  border-radius: 50px;
+  display: block;
+  width: 100%;
+  text-decoration: none;
+}
+.post-form .btn:hover, .post-form .btn:focus {
+  background: #f56d74;
+  outline: none !important;
+  text-decoration: none;
+}
+.post-form a {
+  color: #fff;
+  text-decoration: underline;
+  border-radius: 50px;
+  width: 100%;
+}
+.post-form a:hover {
+  text-decoration: none;
+  }
+  .post-form form a {
+  color: white;
+  text-decoration: none;
+}
+.post-form form a:hover {
+  text-decoration: underline;
+}
+
+.post-text {
+  padding-top: 10px;
 }
 
 #container {
@@ -243,6 +317,7 @@ text-decoration: underline;
   color: white;
   background-color: $tap_me_pink;
   width: 100%;
+  margin-bottom: 10px;
 }
 
 .btn-tertiary:hover {
@@ -321,11 +396,91 @@ text-decoration: underline;
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
 
-@media only screen and (max-width: 600px) {
+/* Media adjustment for extra small phone screen size of 320px and up */
+@media only screen and (max-width: 320px) {
   .login-form .btn {
-    margin-bottom: -10px;
+    margin-bottom: 10px;
   }
   .login-form form {
     margin-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+  }
+}
+
+/* Media adjustment for small screen size of 321px and up */
+@media only screen and (min-width: 321px) {
+  .login-form .btn {
+    margin-bottom: -10px;
+  }
+  .login-form {
+    padding-top: 30px;
+    margin-top: 20px;
+    margin: 0 auto;
+    width: 65vw;
+    height: 50vh;
+  }
+}
+
+/* Media adjustment for medium phone devices of 375px and up */
+@media only screen and (min-width: 375px) {
+  .login-form .btn {
+    margin-bottom: -10px;
+  }
+  .login-form {
+    padding-top: 70px;
+    margin-top: 20px;
+    margin: 0 auto;
+    width: 65vw;
+    height: 50vh;
+  }
+}
+
+/* Media adjustment for large phone devices of 400px and up */
+@media only screen and (min-width: 400px) {
+  .login-form .btn {
+    margin-bottom: -10px;
+  }
+  .login-form {
+    padding-top: 45px;
+    margin-top: 20px;
+    margin: 0 auto;
+    width: 60vw;
+    height: 50vh;
+  }
+}
+
+/* Media adjustment for tablet devices of 768px and up */
+@media only screen and (min-width: 768px) {
+  .login-form .btn {
+    margin-bottom: -10px;
+  }
+  .login-form {
+    padding-top: 45px;
+    margin-top: 20px;
+    margin: 0 auto;
+    width: 40vw;
+    height: 50vh;
+  }
+}
+
+/* Media adjustment for larger screen devices of 992px and up */
+@media only screen and (min-width: 992px) {
+  .login-form {
+      width: 25vw;
+      margin: 0 auto;
+      width: 20vw;
+  }
+  .post-form {
+    margin-top: -20px;
+    margin-bottom: -10px;
+  }
+  .post-form .btn {
+    margin-bottom: -14px;
+  }
+  .post-form h2 {
+    font-size: 22px;
+    margin: 10px 0 25px;
   }
 }
