@@ -1,0 +1,12 @@
+{
+  "id": 29,
+  "choice": "Emotion",
+  "body": "Hi",
+  "address": "145D Albion Road\r\nStoke Newington",
+  "latitude": null,
+  "longitude": null,
+  "user_id": 10,
+  "created_at": "2019-07-13 23:33:18 UTC",
+  "updated_at": "2019-07-13 23:33:18 UTC",
+  "type": "Point"
+}

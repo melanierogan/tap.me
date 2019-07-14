@@ -343,3 +343,13 @@ text-decoration: underline;
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
 
+.mapbox {
+  min-width: 500px;
+  max-width: 300px;
+}
+
+.mapboxgl-popup {
+max-width: 400px;
+font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+

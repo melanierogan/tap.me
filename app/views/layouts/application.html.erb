@@ -10,6 +10,8 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css' rel='stylesheet' />
   </head>
 
   <header>
@@ -47,6 +49,7 @@
         <div class="container fluid" align="center">
         <img src="https://user-images.githubusercontent.com/16557524/60904812-a54d0780-a26b-11e9-8cdc-a4b3ccfba0fd.png" class="img-fluid" style="align: center;">
       </div>
+      
       <%= yield %>
       </div>
       </div>

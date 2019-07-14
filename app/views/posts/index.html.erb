@@ -16,8 +16,9 @@
         <input class="toggle" id="mol_toggle" type="checkbox" />
         <%= link_to '+', new_post_path, class: "btn btn-secondary btn-circle float-right", style: "padding-top: 2px", id: "new_post" %>
       </div>
+      
+    
 
-<br><br><br>
 <% @posts.each do |p| %>
 <div class="card fluid p-4 <%= p.choice %>">
 

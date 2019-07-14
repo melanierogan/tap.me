@@ -27,6 +27,11 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     @post.user_id = current_user.id
     if @post.save
+      
+      tempHash = @post.as_json
+      File.open("data.json","a") do |f|
+        f.write(JSON.pretty_generate(tempHash))
+      end
       flash[:success] = "Your post has been added"
       redirect_to posts_path
     else
