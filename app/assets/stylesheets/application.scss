@@ -407,6 +407,17 @@ body {
     padding-right: 20px;
     padding-bottom: 10px;
   }
+  .post-form {
+    margin-bottom: -40px;
+  }
+  .post-form .btn {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .post-form h2 {
+    font-size: 22px;
+    margin: 10px 0 25px;
+  }
 }
 
 /* Media adjustment for small screen size of 321px and up */
@@ -420,6 +431,17 @@ body {
     margin: 0 auto;
     width: 65vw;
     height: 50vh;
+  }
+  .post-form {
+    margin-bottom: -40px;
+  }
+  .post-form .btn {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  .post-form h2 {
+    font-size: 22px;
+    margin: 10px 0 25px;
   }
 }
 
@@ -477,7 +499,8 @@ body {
     margin-bottom: -10px;
   }
   .post-form .btn {
-    margin-bottom: -14px;
+    padding-top: 5px;
+    padding-top: 5px;
   }
   .post-form h2 {
     font-size: 22px;
