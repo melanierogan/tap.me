@@ -4,15 +4,23 @@ class PostsController < ApplicationController
   helper_method :time_calculation
 
   def index
+    
     @posts = []
     @all_posts = Post.all.order(created_at: :desc)
     @all_posts.each do |p|
     @posts << p if (Time.new - p.created_at) < 86400
+    gon.preference = @all_posts
     end
+  end
+
+  def postsJS
+    render json: { status: 200, all_stories: Post.all }
   end
 
   def show
     @post = Post.find(params[:id])
+    @mapbox = "<%= ENV['MAPBOX_KEY'] %>"
+    gon.MAPBOX_KEY = @mapbox
   end
 
   def new
@@ -33,6 +41,7 @@ class PostsController < ApplicationController
       render 'new'
     end
   end
+
 
   def update
     @post = Post.find(params[:id])
