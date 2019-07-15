@@ -4,18 +4,18 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: 
+one: {
 # column: value
-id: 1
-choice: Emotion
-body: Content
-address: Green Street, Ilford
-user_id: 1
+id: 1,
+choice: Emotion,
+body: Happy,
+address: Green Street,
+user_id: 2 }
 #
-two:
-id: 2
-choice: Action
-body: Lunch
-address: Liverpool Street, London
-user_id: 2
-# column: value
+two: {
+id: 2,
+choice: Action,
+body: Lunch,
+address: Liverpool Street,
+user_id: 2 }
+
