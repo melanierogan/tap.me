@@ -16,10 +16,12 @@ class PostsController < ApplicationController
 
   def sentiment
     # @senitment_posts = []
-    # @all_body = Post.find_by_sql("SELECT body FROM posts;")
-    @all_body = Post.data
+    @all_body = Post.find_by_sql("SELECT body FROM posts WHERE choice = 'Emotion';")
+    @sentiment_store = $analyser.sentiment @all_body[27].body
+    puts @sentiment_store
+    # @all_body = Post.data
     # @all_body_more = @all_body.map {|str| "\"#{str}\""}.join(',')
-    result = JSON.parse(@all_body)
+    # result = JSON.parse(@all_body)
     # result['Post'].each do |post|
     # @all_sentiment = puts post
     # puts "#{result['body']} : #{body['text']}"
@@ -28,7 +30,7 @@ class PostsController < ApplicationController
     # result = @all_body.each { |hash|
     #   puts "\n\n#{hash['id']}, #{hash['body']}"
     # }
-    render json: { status: 200, all_sentiment: result}
+    render json: { status: 200, all_sentiment: @sentiment_store}
   end
 
   def postsJS
@@ -95,7 +97,7 @@ end
 
   private
   def post_params
-    params.require(:post).permit(:choice, :body, :latitude, :longitude)
+    params.require(:post).permit(:choice, :body, :address)
   end
   def correct_user
     @post = Post.find(params[:id])
