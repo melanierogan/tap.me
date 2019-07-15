@@ -1,10 +1,11 @@
 <div id='map'></div>
+
 <script>
 
 mapboxgl.accessToken = 'MAPBOX_KEY'
 var map = new mapboxgl.Map({
 container: 'map',
-style: 'mapbox://styles/mapbox/streets-v11',
+style: 'mapbox://styles/roganmc/cjxyz43go0h081cpccmtt9bmd',
 center: [-0.073, 51.56],
 zoom: 16.15
 });
@@ -45,8 +46,8 @@ map.on('load', function () {
                   },
                   "layout": {
                   "icon-image": 
-                  "airfield-15",
-                  "icon-size": 1.75,
+                  "Action",
+                  "icon-size": 0.25,
                   "icon-allow-overlap": true
                   }
                   }); 
@@ -54,7 +55,7 @@ map.on('load', function () {
 
                     // When a click event occurs on a feature in the places layer, open a popup at the
   // location of the feature, with description HTML from its properties.
-  map.on('click', 'places', function (e) {
+  map.on('click', JSON.stringify(id.id), function (e) {
     var coordinates = e.features[0].geometry.coordinates.slice();
     var description = e.features[0].properties.description;
 
@@ -72,14 +73,15 @@ map.on('load', function () {
   });
 
   // Change the cursor to a pointer when the mouse is over the places layer.
-  map.on('mouseenter', 'places', function () {
+  map.on('mouseenter', JSON.stringify(id.id), function () {
     map.getCanvas().style.cursor = 'pointer';
   });
 
   // Change it back to a pointer when it leaves.
-  map.on('mouseleave', 'places', function () {
+  map.on('mouseleave', JSON.stringify(id.id), function () {
     map.getCanvas().style.cursor = '';
   });
+  
     });
 
   },
@@ -88,8 +90,17 @@ map.on('load', function () {
   }
 
 });
-
+// Add geolocate control to the map.
+map.addControl(new mapboxgl.GeolocateControl({
+positionOptions: {
+enableHighAccuracy: true
+},
+trackUserLocation: true
+}));
 
 });
+
+
+
 
 </script>

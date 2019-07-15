@@ -10,6 +10,12 @@ class PostsController < ApplicationController
     @all_posts.each do |p|
     @posts << p if (Time.new - p.created_at) < 86400
     gon.preference = @all_posts
+    @sentiment_store = $analyser.score @all_posts
+    tempHash = @sentiment_store.to_json
+      File.open("sentiment.json","a") do |f|
+        f.write(JSON.pretty_generate(tempHash))
+      end
+
     end
   end
 
@@ -19,8 +25,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-    @mapbox = "<%= ENV['MAPBOX_KEY'] %>"
-    gon.MAPBOX_KEY = @mapbox
+
   end
 
   def new
@@ -59,6 +64,7 @@ class PostsController < ApplicationController
     flash[:success] = 'Your post has been deleted'
     redirect_to posts_path
   end
+  
 
   def time_calculation(created_at_time, time_now = Time.new)
   time_difference_in_sec = time_now - created_at_time
