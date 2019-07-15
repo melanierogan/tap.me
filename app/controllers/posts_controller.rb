@@ -13,23 +13,20 @@ class PostsController < ApplicationController
     end
   end
 
+  def body_analyser
+    i = 0
+    all_body = Post.find_by_sql("SELECT body FROM posts WHERE choice = 'Emotion';")
+    @sentiment_store = []
+    while i < all_body.length
+      body = all_body[i].body
+      score = $analyser.score body
+      @sentiment_store.push(score)
+      i += 1
+    end
+  end
 
   def sentiment
-    # @senitment_posts = []
-    @all_body = Post.find_by_sql("SELECT body FROM posts WHERE choice = 'Emotion';")
-    @sentiment_store = $analyser.sentiment @all_body[27].body
-    puts @sentiment_store
-    # @all_body = Post.data
-    # @all_body_more = @all_body.map {|str| "\"#{str}\""}.join(',')
-    # result = JSON.parse(@all_body)
-    # result['Post'].each do |post|
-    # @all_sentiment = puts post
-    # puts "#{result['body']} : #{body['text']}"
-    # end
-
-    # result = @all_body.each { |hash|
-    #   puts "\n\n#{hash['id']}, #{hash['body']}"
-    # }
+    body_analyser
     render json: { status: 200, all_sentiment: @sentiment_store}
   end
 

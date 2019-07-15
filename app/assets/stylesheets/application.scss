@@ -565,3 +565,62 @@ body {
     }
 }
 
+/* Media adjustment for 13 inch laptop devices of 1200px and up */
+@media only screen and (min-width: 1200px) {
+  .login-form {
+      width: 20vw;
+      margin: 0 auto;
+      margin-top: -20px;
+  }
+  .post-form {
+    margin-top: -10px;
+    margin-bottom: -10px;
+  }
+  .post-form .btn {
+    padding-top: 5px;
+    padding-top: 5px;
+  }
+  .post-form h2 {
+    font-size: 22px;
+    margin: 10px 0 25px;
+  }
+
+  #map { top:0; bottom:0; width: 100%;
+    height: 500px; position: relative;;}
+  
+  
+  .mapboxgl-popup {
+    max-width: 400px;
+    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    }
+}
+/* Media adjustment for larger displays of 1600px and up */
+@media only screen and (min-width: 1600px) {
+  .login-form {
+      width: 15vw;
+      margin: 0 auto;
+  }
+  .post-form {
+    margin-top: -10px;
+    margin-bottom: -10px;
+  }
+  .post-form .btn {
+    padding-top: 5px;
+    padding-top: 5px;
+  }
+  .post-form h2 {
+    font-size: 22px;
+    margin: 10px 0 25px;
+  }
+
+  #map { top:0; bottom:0; width: 100%;
+    height: 500px; position: relative;;}
+  
+  
+  .mapboxgl-popup {
+    max-width: 400px;
+    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    }
+}
+
+
