@@ -10,13 +10,25 @@ class PostsController < ApplicationController
     @all_posts.each do |p|
     @posts << p if (Time.new - p.created_at) < 86400
     gon.preference = @all_posts
-    @sentiment_store = $analyser.score @all_posts
-    tempHash = @sentiment_store.to_json
-      File.open("sentiment.json","a") do |f|
-        f.write(JSON.pretty_generate(tempHash))
-      end
-
     end
+  end
+
+
+  def sentiment
+    # @senitment_posts = []
+    # @all_body = Post.find_by_sql("SELECT body FROM posts;")
+    @all_body = Post.data
+    # @all_body_more = @all_body.map {|str| "\"#{str}\""}.join(',')
+    result = JSON.parse(@all_body)
+    # result['Post'].each do |post|
+    # @all_sentiment = puts post
+    # puts "#{result['body']} : #{body['text']}"
+    # end
+
+    # result = @all_body.each { |hash|
+    #   puts "\n\n#{hash['id']}, #{hash['body']}"
+    # }
+    render json: { status: 200, all_sentiment: result}
   end
 
   def postsJS
