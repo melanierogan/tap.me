@@ -26,6 +26,8 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     @post.user_id = current_user.id
+    # @post.latitude =
+    # @post.longitude =
     if @post.save
       flash[:success] = "Your post has been added"
       redirect_to posts_path
@@ -68,7 +70,7 @@ end
 
   private
   def post_params
-    params.require(:post).permit(:choice, :body, :address)
+    params.require(:post).permit(:choice, :body, :latitude, :longitude)
   end
   def correct_user
     @post = Post.find(params[:id])
