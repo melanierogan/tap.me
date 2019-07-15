@@ -26,8 +26,6 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     @post.user_id = current_user.id
-    # @post.latitude =
-    # @post.longitude =
     if @post.save
       flash[:success] = "Your post has been added"
       redirect_to posts_path

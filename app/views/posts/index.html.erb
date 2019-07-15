@@ -32,7 +32,8 @@
   <figure class="figure">
     <%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{p.latitude},#{p.longitude}&markers=#{p.latitude},#{p.longitude}&zoom=17&size=640x200&key=#{ENV['GOOGLE_API_KEY']}",
    class: 'figure-img img-fluid', alt: '#{p.address} on the map'%>
-   <figcaption class="figure-caption text-right"><%= p.address %></figcaption>
+    <%# add = Geocoder.address([p.latitude, p.longitude]) %>
+   <figcaption class="figure-caption text-right"><%=  %></figcaption>
    </figure>
   </div>
   <% if current_user.username == p.user.username %>
