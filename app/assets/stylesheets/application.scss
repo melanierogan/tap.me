@@ -399,14 +399,7 @@ body {
 
 
 
-#map { top:0; bottom:0; width: 2460px;
-  height: 500px; position: relative;;}
 
-
-.mapboxgl-popup {
-  max-width: 400px;
-  font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
-  }
 
 
 /* Media adjustment for extra small phone screen size of 320px and up */
@@ -431,6 +424,16 @@ body {
     font-size: 22px;
     margin: 10px 0 25px;
   }
+
+
+  #map { top:0; bottom:0; width: 100%;
+    height: 150px; position: relative;;}
+  
+  
+  .mapboxgl-popup {
+    max-width: 200px;
+    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    }
 }
 
 /* Media adjustment for small screen size of 321px and up */
@@ -456,6 +459,15 @@ body {
     font-size: 22px;
     margin: 10px 0 25px;
   }
+
+  #map { top:0; bottom:0; width: 100%;
+    height: 150px; position: relative;;}
+  
+  
+  .mapboxgl-popup {
+    max-width: 200px;
+    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    }
 }
 
 /* Media adjustment for medium phone devices of 375px and up */
@@ -470,6 +482,15 @@ body {
     width: 65vw;
     height: 50vh;
   }
+
+  #map { top:0; bottom:0; width: 100%;
+    height: 200px; position: relative;;}
+  
+  
+  .mapboxgl-popup {
+    max-width: 200px;
+    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    }
 }
 
 /* Media adjustment for large phone devices of 400px and up */
@@ -484,6 +505,15 @@ body {
     width: 60vw;
     height: 50vh;
   }
+
+  #map { top:0; bottom:0; width: 100%;
+    height: 250px; position: relative;;}
+  
+  
+  .mapboxgl-popup {
+    max-width: 200px;
+    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    }
 }
 
 /* Media adjustment for tablet devices of 768px and up */
@@ -492,20 +522,30 @@ body {
     margin-bottom: -10px;
   }
   .login-form {
+    width: 30vw;
     padding-top: 45px;
     margin-top: 20px;
     margin: 0 auto;
-    width: 40vw;
+    width: 35vw;
     height: 50vh;
   }
+
+
+  #map { top:0; bottom:0; width: 100%;
+    height: 250px; position: relative;;}
+  
+  
+  .mapboxgl-popup {
+    max-width: 200px;
+    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    }
 }
 
 /* Media adjustment for larger screen devices of 992px and up */
 @media only screen and (min-width: 992px) {
   .login-form {
-      width: 25vw;
+      width: 27vw;
       margin: 0 auto;
-      width: 20vw;
   }
   .post-form {
     margin-top: -20px;
@@ -519,5 +559,54 @@ body {
     font-size: 22px;
     margin: 10px 0 25px;
   }
+
+  #map { top:0; bottom:0; width: 100%;
+    height: 500px; position: relative;;}
+  
+  
+  .mapboxgl-popup {
+    max-width: 400px;
+    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    }
 }
 
+/* Media adjustment for 13 inch laptop devices of 1200px and up */
+@media only screen and (min-width: 1200px) {
+  .login-form {
+      width: 20vw;
+      margin: 0 auto;
+      margin-top: -20px;
+  }
+  .post-form {
+    margin-top: -10px;
+    margin-bottom: -10px;
+  }
+  .post-form .btn {
+    padding-top: 5px;
+    padding-top: 5px;
+  }
+  .post-form h2 {
+    font-size: 22px;
+    margin: 10px 0 25px;
+  }
+}
+
+/* Media adjustment for larger displays of 1600px and up */
+@media only screen and (min-width: 1600px) {
+  .login-form {
+      width: 15vw;
+      margin: 0 auto;
+  }
+  .post-form {
+    margin-top: -10px;
+    margin-bottom: -10px;
+  }
+  .post-form .btn {
+    padding-top: 5px;
+    padding-top: 5px;
+  }
+  .post-form h2 {
+    font-size: 22px;
+    margin: 10px 0 25px;
+  }
+}
