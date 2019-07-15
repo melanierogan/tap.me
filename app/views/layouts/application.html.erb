@@ -13,7 +13,7 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
     <script src='https://api.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js'></script>
-<link href='https://api.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css' rel='stylesheet' />
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css' rel='stylesheet' />
   </head>
 
   <header>
@@ -45,6 +45,14 @@
 </header>
 
   <body>
+  <script>
+  var token = ENV['MAPBOX_TOKEN'];
+  console.log(gon.map_variable)
+  console.log('testing env on js', token)
+  // var test = "#{@gon.test_variable || 'null'} 
+  // console.log(test)
+  </script>
+  
   <div class="container">
     <div class="row justify-content-md-center">
       <div class="col col-lg-2">

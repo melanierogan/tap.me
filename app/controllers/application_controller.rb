@@ -15,6 +15,8 @@ class ApplicationController < ActionController::Base
 
   def assign_env_variables
     gon.ga_tracking_id = "<%= ENV['MAPBOX_KEY'] %>"
+    gon.map_variable = 'please read me'
+    gon.test_variable = ENV['TEST_KEY']
   end
 
 end
