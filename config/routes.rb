@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'login' => 'sessions#new'
   delete 'logout' => 'sessions#destroy'
   post 'login' => 'sessions#create'
+  get 'stories' => 'posts#postsJS'
 
   resources :users
 

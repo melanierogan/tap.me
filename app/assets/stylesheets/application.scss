@@ -396,6 +396,19 @@ body {
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
 
+
+
+
+#map { top:0; bottom:0; width: 2460px;
+  height: 500px; position: relative;;}
+
+
+.mapboxgl-popup {
+  max-width: 400px;
+  font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  }
+
+
 /* Media adjustment for extra small phone screen size of 320px and up */
 @media only screen and (max-width: 320px) {
   .login-form .btn {
@@ -507,3 +520,4 @@ body {
     margin: 10px 0 25px;
   }
 }
+
