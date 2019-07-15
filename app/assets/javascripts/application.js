@@ -33,6 +33,3 @@ window.onclick = function(event) {
     }
   }
 }
-
-
-gon.MAPBOX_KEY
