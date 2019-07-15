@@ -4,15 +4,28 @@ class PostsController < ApplicationController
   helper_method :time_calculation
 
   def index
+    
     @posts = []
     @all_posts = Post.all.order(created_at: :desc)
     @all_posts.each do |p|
     @posts << p if (Time.new - p.created_at) < 86400
+    gon.preference = @all_posts
+    @sentiment_store = $analyser.score @all_posts
+    tempHash = @sentiment_store.to_json
+      File.open("sentiment.json","a") do |f|
+        f.write(JSON.pretty_generate(tempHash))
+      end
+
     end
+  end
+
+  def postsJS
+    render json: { status: 200, all_stories: Post.all }
   end
 
   def show
     @post = Post.find(params[:id])
+
   end
 
   def new
@@ -34,6 +47,7 @@ class PostsController < ApplicationController
     end
   end
 
+
   def update
     @post = Post.find(params[:id])
     if @post.update(post_params)
@@ -50,6 +64,7 @@ class PostsController < ApplicationController
     flash[:success] = 'Your post has been deleted'
     redirect_to posts_path
   end
+  
 
   def time_calculation(created_at_time, time_now = Time.new)
   time_difference_in_sec = time_now - created_at_time
