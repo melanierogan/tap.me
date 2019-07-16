@@ -20,7 +20,7 @@
   <header>
   <% if logged_in? %>
   <nav class="navbar navbar-expand-lg navbar-light bg-white">
-    
+
   <!-- Collapse button -->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon">
     </span>
@@ -31,8 +31,11 @@
     <li class="nav-item">
       <%= image_tag('tap_me_logo_p.png', :alt => 'Tap me logo', :style => 'height: 40px') %>
     </li>
-    <li class="nav-item active">
+    <li class="nav-item">
       <%= link_to 'Posts', posts_path, :class => "nav-link" %>
+    </li>
+    <li class="nav-item">
+      <%= link_to 'About', about_path, :class => "nav-link" %>
     </li>
     <li class="nav-item dropdown">
       <button onclick="myFunction()" class="dropbtn">Settings ▾</button>
@@ -47,12 +50,14 @@
   </ul>
   </div>
   </nav>
+  <% if current_page?(posts_path) %>
   <%= render 'map' %>
+  <% end %>
   <% end %>
 </header>
 
   <body>
-  
+
   <div class="container">
     <div class="row justify-content-md-center">
       <div class="col col-lg-2">

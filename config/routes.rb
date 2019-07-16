@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   delete 'logout' => 'sessions#destroy'
   post 'login' => 'sessions#create'
   get 'stories' => 'posts#postsJS'
-
+  get '/about' => 'about#index'
   resources :users
 
 end
