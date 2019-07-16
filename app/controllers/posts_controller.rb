@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   helper_method :time_calculation
 
   def index
-    
+    sentimentbar
     @posts = []
     @all_posts = Post.all.order(created_at: :desc)
     @all_posts.each do |p|
@@ -27,7 +27,43 @@ class PostsController < ApplicationController
 
   def sentiment
     body_analyser
-    render json: { status: 200, all_sentiment: @sentiment_store}
+    render json: { 
+      status: 200, 
+      all_data: [
+        all_stories: Post.all,
+        all_sentiment: @sentiment_store
+      ]
+    }
+  end
+
+  def sentimentbar
+    positive = 0.00
+    negative = 0.00
+    neutral = 0.00
+    i = 0
+    all_body = Post.find_by_sql("SELECT body FROM posts WHERE choice = 'Emotion';")
+    @sentiment_word_store = []
+    while i < all_body.length
+      body = all_body[i].body
+      mark = $analyser.sentiment body
+      @sentiment_word_store.push(mark)
+      i += 1
+    end
+    j = 0
+    while j < @sentiment_word_store.length 
+      if @sentiment_word_store[j] == :positive
+        positive += 1
+      elsif @sentiment_word_store[j] == :negative
+        negative += 1
+      else
+        neutral += 1
+      end
+      j += 1
+    end
+    total = (positive + negative + neutral)
+    @positive_sent = ((positive*100)/total).round
+    @neutral_sent = ((neutral*100)/total).round
+    @negative_sent = ((negative*100)/total).round
   end
 
   def postsJS

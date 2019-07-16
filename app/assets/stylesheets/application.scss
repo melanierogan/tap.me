@@ -24,6 +24,33 @@ body {
   background-color: #f56d74;
 }
 
+#sentiment { width: 100%; position: relative;}
+
+.sentiment_positive {
+  background-color: #fde9e9;
+  top: 2px;
+  float: left; 
+  height: 20px; 
+  text-align: center;
+  color: black;
+}
+.sentiment_neutral {
+  background-color: #fac9ca;
+  top: 2px;
+  float: left; 
+  height: 20px; 
+  text-align: center;
+  color: black;
+}
+.sentiment_negative {
+  background-color: #ef6768;
+  top: 2px;
+  float: left; 
+  height: 20px; 
+  text-align: center;
+  color: black;
+}
+
 .toggle {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -615,7 +642,7 @@ body {
 
   #map { top:0; bottom:0; width: 100%;
     height: 500px; position: relative;;}
-  
+    
   
   .mapboxgl-popup {
     max-width: 400px;
