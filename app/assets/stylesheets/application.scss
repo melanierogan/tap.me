@@ -359,10 +359,12 @@ body {
   padding: 8px;
   font-size: 16px;
   border: none;
+  transition: color 0.4s ease;
 }
 
 /* Dropdown button on hover & focus */
 .dropbtn:hover, .dropbtn:focus {
+  transition: color 0.4s ease;
   color: #4C4C4C;
 }
 
