@@ -14,11 +14,18 @@
  *= require_self
  */
 
+ $theme-colors: (
+   "success": #f56d74,
+   "danger": #7A363A
+   );
+
  @import "bootstrap";
 
  $tap_me_pink: #f56d74;
  $tap_me_pink_dark: #7A363A;
  $tap_me_grey: #dc6268;
+
+
 
 body {
   background-color: #f56d74;

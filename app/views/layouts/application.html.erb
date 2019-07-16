@@ -47,13 +47,35 @@
     <li class="nav-item">
       <%= link_to 'Log Out', logout_path, :class => "nav-link", method: :delete %>
     </li>
-  </ul>
+    </ul>
+
   </div>
   </nav>
   <% if current_page?(posts_path) %>
   <%= render 'map' %>
   <% end %>
   <% end %>
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item">
+    <% if flash[:success] %>
+      <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <%= flash[:success] %>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    <% end %>
+
+    <% if flash[:error] %>
+      <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <%= flash[:error] %>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    <% end %>
+    </li>
+  </ul>
 </header>
 
   <body>
@@ -67,6 +89,7 @@
         <div class="container fluid" align="center">
         <img src="https://user-images.githubusercontent.com/16557524/61187400-a2398900-a668-11e9-9855-84c3ded1eee7.png" class="img-fluid" style="align: center;">
       </div>
+
       <%= yield %>
       </div>
       </div>
