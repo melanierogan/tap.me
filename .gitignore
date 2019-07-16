@@ -28,3 +28,5 @@
 
 # Ignore google api key file
 /config/local_env.yml
+
+/sentiment.json
