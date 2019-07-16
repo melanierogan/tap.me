@@ -83,7 +83,7 @@ end
 
   private
   def post_params
-    params.require(:post).permit(:choice, :body, :address)
+    params.require(:post).permit(:choice, :body, :latitude, :longitude)
   end
   def correct_user
     @post = Post.find(params[:id])
