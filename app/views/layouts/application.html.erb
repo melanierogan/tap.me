@@ -31,10 +31,10 @@
     <li class="nav-item px-3">
       <%= image_tag('tap_me_logo_p.png', :alt => 'Tap me logo', :style => 'height: 40px') %>
     </li>
-    <li class="nav-item px-3">
+    <li class="nav-item px-3 <%= 'active' if current_page? posts_path %>">
       <%= link_to 'Posts', posts_path, :class => "nav-link" %>
     </li>
-    <li class="nav-item px-3">
+    <li class="nav-item px-3 <%= 'active' if current_page? about_path %>">
       <%= link_to 'About', about_path, :class => "nav-link" %>
     </li>
     <li class="nav-item dropdown px-2">
