@@ -68,7 +68,7 @@
         null,
         null,
         1,
-        2,
+        3,
         null,
         null,
         1,
@@ -116,10 +116,6 @@
         0,
         0,
         0,
-        0,
-        0,
-        0,
-        null,
         0,
         null,
         null,
@@ -138,15 +134,15 @@
         1,
         null,
         1,
-        146,
+        147,
         null,
         null,
         1,
-        82,
+        83,
         null,
         null,
         1,
-        42,
+        43,
         null,
         null,
         null,
@@ -216,10 +212,6 @@
         null,
         null,
         1,
-        0,
-        null,
-        null,
-        1,
         1,
         1,
         1,
@@ -234,15 +226,8 @@
         null,
         null,
         null
-      ],
-      "/Users/manisha.patel/Project/tap_me/app/controllers/about_controller.rb": [
-        0,
-        null,
-        0,
-        0,
-        0
       ]
     },
-    "timestamp": 1563277945
+    "timestamp": 1563278920
   }
 }

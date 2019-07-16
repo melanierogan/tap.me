@@ -67,12 +67,8 @@ class PostsController < ApplicationController
     "#{time_difference_in_sec.to_i} seconds ago"
   elsif time_difference_in_sec < 3600
     "#{(time_difference_in_sec / 60).to_i} minutes ago"
-  elsif time_difference_in_sec < 86_400
+  else time_difference_in_sec < 86_400
     "#{((time_difference_in_sec / 60) / 60).to_i} hours ago"
-  elsif time_difference_in_sec < 31_540_000
-    "#{(((time_difference_in_sec / 60) / 60) / 24).to_i} days ago"
-  else
-    'Over 1 year old'
   end
 end
 
