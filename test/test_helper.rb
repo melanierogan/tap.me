@@ -9,7 +9,7 @@ SimpleCov.start 'rails' do
   add_filter '/app/channels'
   add_filter 'app/controllers/toggle_controller.rb'
   add_filter 'app/helpers/application_helper.rb'
-
+  add_filter 'app/controllers/about_controller.rb'
 end
 ENV['RAILS_ENV'] ||= 'test'
 require_relative '../config/environment'
