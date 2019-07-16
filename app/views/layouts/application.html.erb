@@ -12,6 +12,7 @@
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src='https://api.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css' rel='stylesheet' />
   </head>
@@ -19,27 +20,41 @@
   <header>
   <% if logged_in? %>
   <nav class="navbar navbar-expand-lg navbar-light bg-white">
-  <ul class="navbar-nav nav-fill w-25">
-    <li class="nav-item">
+
+  <!-- Collapse button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon">
+    </span>
+  </button>
+  <!-- Collapsible content -->
+  <div class="collapse navbar-collapse" id="navbarNav">
+  <ul class="navbar-nav">
+    <li class="nav-item px-3">
       <%= image_tag('tap_me_logo_p.png', :alt => 'Tap me logo', :style => 'height: 40px') %>
     </li>
-    <li class="nav-item active">
+    <li class="nav-item px-3 <%= 'active' if current_page? posts_path %>">
       <%= link_to 'Posts', posts_path, :class => "nav-link" %>
     </li>
-    <li class="nav-item dropdown">
+    <li class="nav-item px-3 <%= 'active' if current_page? about_path %>">
+      <%= link_to 'About', about_path, :class => "nav-link" %>
+    </li>
+    <li class="nav-item dropdown px-2">
       <button onclick="myFunction()" class="dropbtn">Settings ▾</button>
       <div id="myDropdown" class="dropdown-content">
       <%= link_to 'Delete Account', user_path(current_user), class: "nav-link", :style => "color: #f56d74",
         method: :delete,
         data: { confirm: 'Are you sure?' } %>
     </li>
-    <li class="nav-item">
+    <li class="nav-item px-2">
       <%= link_to 'Log Out', logout_path, :class => "nav-link", method: :delete %>
     </li>
   </ul>
+  </div>
   </nav>
+
+  <% if current_page?(posts_path) %>
   <%= render 'sentimentbar' %>
   <%= render 'map' %>
+  <% end %>
   <% end %>
 </header>
 

@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get 'stories' => 'posts#postsJS'
   get 'sentiment' => 'posts#sentiment'
 
+  get '/about' => 'about#index'
   resources :users
 
 end

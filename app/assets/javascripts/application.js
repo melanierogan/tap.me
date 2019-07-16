@@ -14,6 +14,9 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+//= require jquery3
+//= require popper
+//= require bootstrap
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
 function myFunction() {

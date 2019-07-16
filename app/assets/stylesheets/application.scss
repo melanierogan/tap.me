@@ -375,7 +375,7 @@ body {
     transition: color 0.4s ease;
 }
 .nav-link:hover{
-    color: $tap_me_pink_dark;
+    color: #4C4C4C;
     transition: color 0.4s ease;
 }
 
@@ -386,11 +386,13 @@ body {
   padding: 8px;
   font-size: 16px;
   border: none;
+  transition: color 0.4s ease;
 }
 
 /* Dropdown button on hover & focus */
 .dropbtn:hover, .dropbtn:focus {
-  color: black;
+  transition: color 0.4s ease;
+  color: #4C4C4C;
 }
 
 /* The container <div> - needed to position the dropdown content */
@@ -450,8 +452,8 @@ body {
 
   #map { top:0; bottom:0; width: 100%;
     height: 150px; position: relative;;}
-  
-  
+
+
   .mapboxgl-popup {
     max-width: 200px;
     font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
@@ -484,8 +486,8 @@ body {
 
   #map { top:0; bottom:0; width: 100%;
     height: 150px; position: relative;;}
-  
-  
+
+
   .mapboxgl-popup {
     max-width: 200px;
     font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
@@ -507,8 +509,8 @@ body {
 
   #map { top:0; bottom:0; width: 100%;
     height: 200px; position: relative;;}
-  
-  
+
+
   .mapboxgl-popup {
     max-width: 200px;
     font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
@@ -530,8 +532,8 @@ body {
 
   #map { top:0; bottom:0; width: 100%;
     height: 250px; position: relative;;}
-  
-  
+
+
   .mapboxgl-popup {
     max-width: 200px;
     font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
@@ -544,18 +546,19 @@ body {
     margin-bottom: -10px;
   }
   .login-form {
+    width: 30vw;
     padding-top: 45px;
     margin-top: 20px;
     margin: 0 auto;
-    width: 40vw;
+    width: 35vw;
     height: 50vh;
   }
 
 
   #map { top:0; bottom:0; width: 100%;
     height: 250px; position: relative;;}
-  
-  
+
+
   .mapboxgl-popup {
     max-width: 200px;
     font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
@@ -565,9 +568,8 @@ body {
 /* Media adjustment for larger screen devices of 992px and up */
 @media only screen and (min-width: 992px) {
   .login-form {
-      width: 25vw;
+      width: 27vw;
       margin: 0 auto;
-      width: 20vw;
   }
   .post-form {
     margin-top: -20px;
@@ -584,8 +586,8 @@ body {
 
   #map { top:0; bottom:0; width: 100%;
     height: 500px; position: relative;;}
-  
-  
+
+
   .mapboxgl-popup {
     max-width: 400px;
     font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
@@ -611,16 +613,8 @@ body {
     font-size: 22px;
     margin: 10px 0 25px;
   }
-
-  #map { top:0; bottom:0; width: 100%;
-    height: 500px; position: relative;;}
-  
-  
-  .mapboxgl-popup {
-    max-width: 400px;
-    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
-    }
 }
+
 /* Media adjustment for larger displays of 1600px and up */
 @media only screen and (min-width: 1600px) {
   .login-form {
@@ -639,15 +633,4 @@ body {
     font-size: 22px;
     margin: 10px 0 25px;
   }
-
-  #map { top:0; bottom:0; width: 100%;
-    height: 500px; position: relative;;}
-    
-  
-  .mapboxgl-popup {
-    max-width: 400px;
-    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
-    }
 }
-
-
