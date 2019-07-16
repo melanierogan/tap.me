@@ -50,7 +50,9 @@
   </ul>
   </div>
   </nav>
+  <% if current_page?(posts_path) %>
   <%= render 'map' %>
+  <% end %>
   <% end %>
 </header>
 
