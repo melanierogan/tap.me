@@ -9,7 +9,6 @@ class PostsTest < ApplicationSystemTestCase
     click_on('Log In')
     click_on('+')
     fill_in 'post[body]', with: 'Content'
-    fill_in 'post[address]', with: '116 Goswell Road, London'
     click_on('Save Post')
     assert_text 'Content'
   end
@@ -21,7 +20,6 @@ class PostsTest < ApplicationSystemTestCase
     click_on('Log In')
     click_on('+')
     fill_in 'post[body]', with: 'Content'
-    fill_in 'post[address]', with: '116 Goswell Road, London'
     click_on('Save Post')
     assert_text 'Content'
     click_link('Update', :match => :first)
@@ -37,7 +35,6 @@ class PostsTest < ApplicationSystemTestCase
     click_on('Log In')
     click_on('+')
     fill_in 'post[body]', with: 'Content'
-    fill_in 'post[address]', with: '116 Goswell Road, London'
     click_on('Save Post')
     assert_text 'Content'
     click_link('Delete', :match => :first)
