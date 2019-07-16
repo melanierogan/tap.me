@@ -28,23 +28,23 @@
   <!-- Collapsible content -->
   <div class="collapse navbar-collapse" id="navbarNav">
   <ul class="navbar-nav">
-    <li class="nav-item">
+    <li class="nav-item px-3">
       <%= image_tag('tap_me_logo_p.png', :alt => 'Tap me logo', :style => 'height: 40px') %>
     </li>
-    <li class="nav-item">
+    <li class="nav-item px-3 <%= 'active' if current_page? posts_path %>">
       <%= link_to 'Posts', posts_path, :class => "nav-link" %>
     </li>
-    <li class="nav-item">
+    <li class="nav-item px-3 <%= 'active' if current_page? about_path %>">
       <%= link_to 'About', about_path, :class => "nav-link" %>
     </li>
-    <li class="nav-item dropdown">
+    <li class="nav-item dropdown px-2">
       <button onclick="myFunction()" class="dropbtn">Settings ▾</button>
       <div id="myDropdown" class="dropdown-content">
       <%= link_to 'Delete Account', user_path(current_user), class: "nav-link", :style => "color: #f56d74",
         method: :delete,
         data: { confirm: 'Are you sure?' } %>
     </li>
-    <li class="nav-item">
+    <li class="nav-item px-2">
       <%= link_to 'Log Out', logout_path, :class => "nav-link", method: :delete %>
     </li>
   </ul>
@@ -60,7 +60,7 @@
 
   <div class="container">
     <div class="row justify-content-md-center">
-      <div class="col col-lg-2">
+      <div class="col col-lg">
       </div>
       <div class="col-md-auto">
       <div class="container fluid">
@@ -70,7 +70,7 @@
       <%= yield %>
       </div>
       </div>
-      <div class="col col-lg-2">
+      <div class="col col-lg">
       </div>
     </div>
   </div>
