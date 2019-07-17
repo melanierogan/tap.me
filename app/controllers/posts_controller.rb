@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   helper_method :time_calculation
 
   def index
-    
+
     @posts = []
     @all_posts = Post.all.order(created_at: :desc)
     @all_posts.each do |p|
@@ -59,7 +59,7 @@ class PostsController < ApplicationController
     flash[:success] = 'Your post has been deleted'
     redirect_to posts_path
   end
-  
+
 
   def time_calculation(created_at_time, time_now = Time.new)
   time_difference_in_sec = time_now - created_at_time

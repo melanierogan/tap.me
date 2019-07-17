@@ -17,7 +17,6 @@
             <%= form.hidden_field :latitude ,:id=>"latitude" %>
             <%= form.hidden_field :longitude ,:id=>"longitude" %>
 
-
             <script type="text/javascript">
                navigator.geolocation.getCurrentPosition((position) => {
                $('#latitude').attr('value', position.coords.latitude)
