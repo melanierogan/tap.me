@@ -24,7 +24,6 @@ class PostsController < ApplicationController
   end
 
   def new
-    request.location
     @post = Post.new
   end
 
