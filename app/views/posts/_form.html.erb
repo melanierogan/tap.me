@@ -17,6 +17,9 @@
             <%= form.hidden_field :latitude ,:id=>"latitude" %>
             <%= form.hidden_field :longitude ,:id=>"longitude" %>
 
+            <!-- <button onclick="getLocation()">Try It</button>
+
+            <p id="demo"></p> -->
 
             <script type="text/javascript">
                navigator.geolocation.getCurrentPosition((position) => {

@@ -17,6 +17,7 @@ map.on('load', function () {
   dataType: "json",
   success: function (json) {
     $.each(json.all_stories, function(body, id, address, latitude, longitude){
+    
     map.addLayer({
                   "id": JSON.stringify(id.id),
                   "type": "symbol",
@@ -46,6 +47,7 @@ map.on('load', function () {
                   "icon-allow-overlap": true
                   }
                   }); 
+
                     // When a click event occurs on a feature in the places layer, open a popup at the
   // location of the feature, with description HTML from its properties.
   map.on('click', JSON.stringify(id.id), function (e) {
