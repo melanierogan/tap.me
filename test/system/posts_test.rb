@@ -9,7 +9,9 @@ class PostsTest < ApplicationSystemTestCase
     click_on('Log In')
     click_on('+')
     fill_in 'post[body]', with: 'Content'
+    using_wait_time 5 do
     click_on('Save Post')
+  end
     assert_text 'Content'
   end
   test 'failed new post' do
@@ -19,7 +21,9 @@ class PostsTest < ApplicationSystemTestCase
     click_on('Log In')
     click_on('+')
     fill_in 'post[body]', with: ' '
+        using_wait_time 5 do
     click_on('Save Post')
+  end
     assert_text 'My Post'
   end
 
@@ -30,11 +34,15 @@ class PostsTest < ApplicationSystemTestCase
     click_on('Log In')
     click_on('+')
     fill_in 'post[body]', with: 'Content'
+        using_wait_time 5 do
     click_on('Save Post')
+  end
     assert_text 'Content'
     click_link('Update', :match => :first)
     fill_in 'post[body]', with: 'Test update'
+        using_wait_time 5 do
     click_on 'Save Post'
+  end
     assert_text 'Test update'
   end
 
@@ -45,7 +53,9 @@ class PostsTest < ApplicationSystemTestCase
     click_on('Log In')
     click_on('+')
     fill_in 'post[body]', with: 'Content'
+        using_wait_time 5 do
     click_on('Save Post')
+  end
     assert_text 'Content'
     click_link('Update', :match => :first)
     fill_in 'post[body]', with: 'te'
@@ -60,7 +70,9 @@ class PostsTest < ApplicationSystemTestCase
     click_on('Log In')
     click_on('+')
     fill_in 'post[body]', with: 'Content'
+        using_wait_time 5 do
     click_on('Save Post')
+  end
     assert_text 'Content'
     click_link('Delete', :match => :first)
     page.driver.browser.switch_to.alert.accept

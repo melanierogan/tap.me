@@ -52,11 +52,13 @@
         method: :delete,
         data: { confirm: 'Are you sure?' } %>
     </li>
+      <% if current_page?(posts_path) %>
     <li class="nav-item px-2">
   <a id="mood-button" class="nav-link pointer">
 Today's Mood
 </a>
 </li>
+<% end %>
     <li class="nav-item px-2">
       <%= link_to 'Log Out', logout_path, :class => "nav-link", method: :delete %>
     </li>
