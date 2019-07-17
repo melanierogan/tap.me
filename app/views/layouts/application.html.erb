@@ -45,15 +45,31 @@
         data: { confirm: 'Are you sure?' } %>
     </li>
     <li class="nav-item px-2">
+  <a id="mood-button" class="nav-link">
+Today's Mood
+</a>
+</li>
+    <li class="nav-item px-2">
       <%= link_to 'Log Out', logout_path, :class => "nav-link", method: :delete %>
     </li>
-    
+
+
+<script>
+  $(document).ready(function(){
+     $('#mood-button').click(function(){
+       $('#profile-information').toggle();
+     });
+   });
+</script>
+
+
+
   </ul>
   </div>
   </nav>
   <% if current_page?(posts_path) %>
   <section>
-  <div id="sentiment">
+  <div id="profile-information" class= "hidden">
     <div class="sentiment_negative" role="progressbar" style="width: <%= @negative_sent %>%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"><strong>😔</strong></div>
     <div class="sentiment_neutral" role="progressbar" style="width: <%= @neutral_sent %>%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"><strong>😐</strong></div>
     <div class="sentiment_positive" role="progressbar" style="width: <%= @positive_sent %>%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"><strong>😊</strong></div>
