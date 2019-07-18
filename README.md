@@ -1,9 +1,9 @@
-Tap.me
+![Tap.me logo](tap_me_logo_p.png)
+
+Welcome to Tap.me
 ==========
 
-
-This is a group project for our final task at Makers. We are making a webapp that allows users to log in and either share their location or their feelings. 
-
+This is a group project for our final task at Makers. We are making a webapp that allows users to log in and either share their location or their feelings.
 
 Tech stack
 ------
