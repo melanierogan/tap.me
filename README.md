@@ -1,4 +1,4 @@
-![Tap.me logo](app/assets/images/tap_me_logo.png)
+![Tap.me logo](app/assets/images/tap_me_logo_p.png)
 
 Welcome to Tap.me
 ==========
