@@ -5,7 +5,7 @@ Welcome to Tap.me
 
 Tap.me is a wellbeing web app to combat feelings of isolation. Users can sign up in order to create posts that can be categorised with an emotion or action tag, which can be used later for filtering on the map. Emotion posts will disappear after 24 hours in order to connect with others around you in real time. Happy posting!
 
-![App screenshot](app/assets/images/App Screenshot.png)
+![App screenshot](app/assets/images/app_screenshot.png)
 
 Tech stack
 ------
